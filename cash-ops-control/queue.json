@@ -4,10 +4,10 @@
     "accepted_work": 0,
     "submitted_checks": 0,
     "verifications": 3,
-    "leased": 1,
-    "parked": 1
+    "leased": 0,
+    "parked": 2
   },
-  "generated_at": "2026-09-21T21:49:11+00:00",
+  "generated_at": "2026-09-21T21:55:00+00:00",
   "jobs": [
     {
       "id": "verify-1808a0c602aa5d9dcdc2",

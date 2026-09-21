@@ -142,12 +142,16 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
-        "lease": {
-          "owner": "hourly-executor",
-          "claimed_at": "2026-09-21T21:49:11+00:00",
-          "expires_at": "2026-09-21T22:49:11+00:00"
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-21T21:55:00+00:00",
+        "last_note": "Verified source issue/comments: open, unassigned, three competing attempts/proposals, no published payout or payment trigger.",
+        "checkpoint": {
+          "at": "2026-09-21T21:55:00+00:00",
+          "summary": "Primary GitHub issue and timeline checked. No funded bounty terms or assignment path; rejected without outreach or spend."
         },
-        "current_job": {
+        "parked": true,
+        "parked_reason": "rejected",
+        "last_job": {
           "id": "verify-1410a4fed5de6eb83718",
           "kind": "verify",
           "source_fingerprint": "da83444236b286bc5b96de05"
@@ -157,16 +161,17 @@
       "id": "1410a4fed5de6eb83718",
       "last_seen": "2026-09-21T20:37:30+00:00",
       "open": true,
-      "payout_basis": "not verified",
+      "payout_basis": "No authoritative fixed payout or payment terms published.",
       "score": 35,
       "source": "Algora public bounties",
       "source_comments": 3,
       "source_updated_at": "2026-09-19T17:59:21Z",
-      "status": "lead",
+      "status": "rejected",
       "summary": "Most job connectors scrape HTML from consumer sites with a bare `net/http` client — Go's TLS fingerprint, a Go User-Agent, and a datacenter IP. Only five of them use any anti-bot transport at all. Measured on `main`, counting transport references per file in `internal/engine/jobs/`: | connector | transport | |---|---| | `craigslist.go` | `engine.Cfg.BrowserClient` (stealth) | | `indeed.go` | `engine.Cfg.BrowserClient` (stealth) | | `ycjobs.go` | `engine.Cfg.BrowserClient` (stealth) | | `linkedin.go` | `engine.FetchProxyBody` (stealth → proxy → ox-browser) | | `himalayas.go` | `engine.FetchProxyBody` | | everything else (~25 files) | bare `net/http` | Bare is not wrong everywhere. Splitting the rest by what they actually fetch: **Legitimately bare — documented JSON APIs, often token-authenticated. Leave alone.** `api.github.com` (`sherlock.go`, `github_prs.go`, `algora_github.go`), `api.ashbyhq.com` / `api.lever.co` / `boards.greenhouse.io` (`ats.go`), `api.boss.dev`, `api.bountyhub.dev`, `raw.githubusercontent.com` (`security_bounty.go`). Routing these through a browser tier would add latency and a failure mode for nothing. **Candidates — HTML scraped from a consumer site, no anti-",
       "title": "Most HTML-scraping connectors bypass stealth entirely — standardise on ox-browser POST /fetch",
       "url": "https://github.com/anatolykoptev/go-job/issues/348",
-      "verified": false
+      "verified": true,
+      "notes": "Open engineering issue, but not a verified paid bounty: no fixed payout, payout method, acceptance/payment trigger, or assignee path is published. At least three competing claim/proposal comments already exist."
     },
     {
       "accepted_payout": null,
