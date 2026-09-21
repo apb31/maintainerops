@@ -1,13 +1,13 @@
 # Cash Ops Control
 
-Updated: never  
-Scan health: **not run**
+Updated: 2026-09-21T20:00:01+00:00  
+Scan health: **ok**
 
 ## Financial ledger
 
 | Measure | USD | Meaning |
 |---|---:|---|
-| Advertised | $150.00 | Public fixed amounts observed; not earned |
+| Advertised | $50.00 | Public fixed amounts observed; not earned |
 | Accepted | $0.00 | Operator-recorded agreed payouts; not yet cash |
 | Collected | $0.00 | Operator-recorded money received |
 | Pending payout | $0.00 | Accepted less recorded collection, floored per item |
@@ -16,15 +16,15 @@ Scan health: **not run**
 | Net | $0.00 | Recorded collection less recorded spend |
 
 Applications/claims in progress: **3**  
-Best next action: Check payout: [Omi Spanish quickstart proposal](https://github.com/BasedHardware/omi/issues/14576)  
-External worker status: latest scan run **not run** at unavailable; execution host heartbeat is not available.  
+Best next action: Check payout: [[Bounty proposal] docs(cli): Spanish agent quickstart and CSV export guide ($60 proposed)](https://github.com/BasedHardware/omi/issues/14576)  
+External worker status: latest scan run **ok** at 2026-09-21T20:00:01+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Pipeline
 
 | Status | Count |
 |---|---:|
-| lead | 0 |
+| lead | 25 |
 | qualified | 0 |
 | claimed | 0 |
 | working | 0 |
@@ -36,7 +36,11 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Source observations
 
-- public GitHub import: reviewed (4) at 2026-09-21T19:59:31+00:00
+- Algora public bounties: ok (25) at 2026-09-21T20:00:00+00:00
+- Opire public bounties: ok (0) at 2026-09-21T20:00:00+00:00
+- track:5b6c1a767f1f44fb50d0: ok (1) at 2026-09-21T20:00:01+00:00
+- track:d89ea75c81165d3bb511: ok (1) at 2026-09-21T20:00:01+00:00
+- track:d10522644a4407ad1aad: ok (1) at 2026-09-21T20:00:01+00:00
 
 ## Errors
 
