@@ -8,16 +8,48 @@
       "etag": null,
       "last_modified": null
     },
+    "track:10ef626d966104dcf4a0": {
+      "etag": "\"0409c913292145cecf3dee051dc4a14a180d88d6e5792a9f2a07cdecf27cfc6c\"",
+      "last_modified": "Thu, 16 Jul 2026 11:01:52 GMT"
+    },
+    "track:1410a4fed5de6eb83718": {
+      "etag": "\"011b7429ed30778c0079246580fdc4d14b9c435414d5303993227e83deb30971\"",
+      "last_modified": "Sat, 19 Sep 2026 17:59:21 GMT"
+    },
+    "track:1808a0c602aa5d9dcdc2": {
+      "etag": "\"99cc6a0d80b321d614eaf54ac0a0993d77a93fb0d286ea9f2b9f995b208ed6f0\"",
+      "last_modified": "Thu, 17 Sep 2026 13:10:16 GMT"
+    },
+    "track:23648899e8c4ff068c69": {
+      "etag": "\"9472444011309aa9cd5bdfe042499405c88921245c962beedd7c7fcd65c74e09\"",
+      "last_modified": "Thu, 17 Sep 2026 13:10:16 GMT"
+    },
+    "track:2447ca748dfe7da6d196": {
+      "etag": "\"0c64f5e17e121f3c2c38e60a11ea96edab2605f8738bdbec4d615e1f8131b7b1\"",
+      "last_modified": "Mon, 17 Aug 2026 19:24:59 GMT"
+    },
+    "track:33ed148138b70f539324": {
+      "etag": "\"f5de123506efe787cecc78441c5c5a5c8a0ff05c060166495b8201d040c02207\"",
+      "last_modified": "Mon, 17 Aug 2026 19:24:59 GMT"
+    },
+    "track:3edc98b7d14fcff33d3c": {
+      "etag": "\"19e3e92bba71dcbb12dfb822655272b48308d9813fd6325ea194406c371943fe\"",
+      "last_modified": "Mon, 21 Sep 2026 04:53:38 GMT"
+    },
+    "track:45147c39842053097e88": {
+      "etag": "\"1415eff1a264f12cb21ca9bf293af949ad6173c98d44dcb54004ab50b61aa9b9\"",
+      "last_modified": "Tue, 15 Sep 2026 18:26:10 GMT"
+    },
     "track:5b6c1a767f1f44fb50d0": {
       "etag": "\"1125ab7a7a5e0de7ceffa34f1ad9b45f20ea8b6f16ec0c475dceb4103654cd57\"",
       "last_modified": "Mon, 21 Sep 2026 16:37:08 GMT"
     },
     "track:d10522644a4407ad1aad": {
-      "etag": "\"4a21055d24880a81313ad2c4b417b9da0b14c84a043194d46fe286c2680f36a7\"",
+      "etag": "\"e90228ecd7762e0e840795ac31c3dc9b55f0807f8d21657890d0fe7a505b721d\"",
       "last_modified": "Fri, 29 May 2026 18:03:12 GMT"
     },
     "track:d89ea75c81165d3bb511": {
-      "etag": "\"821e2e7dcc89978668f93fea2bc0f06c5d4ef571502649283a66528ad79f9d1b\"",
+      "etag": "\"22c539690e81e0c609ce4b87e51021b0ab3b4695f7df16c7418415ecff77144a\"",
       "last_modified": "Sun, 20 Sep 2026 14:23:16 GMT"
     }
   },
@@ -29,7 +61,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T19:59:31+00:00",
       "id": "d10522644a4407ad1aad",
-      "last_seen": "2026-09-21T20:00:01+00:00",
+      "last_seen": "2026-09-21T20:02:50+00:00",
       "notes": "Do not duplicate work; eligibility of remaining scope unconfirmed.",
       "open": true,
       "payout_basis": "not verified",
@@ -49,7 +81,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T19:59:31+00:00",
       "id": "d89ea75c81165d3bb511",
-      "last_seen": "2026-09-21T20:00:01+00:00",
+      "last_seen": "2026-09-21T20:02:50+00:00",
       "notes": "Not eligible for autonomous AI fulfillment under published rules.",
       "open": true,
       "payout_basis": "not verified",
@@ -69,7 +101,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "10ef626d966104dcf4a0",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:51+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -86,7 +118,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "1410a4fed5de6eb83718",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:51+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -103,7 +135,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "1808a0c602aa5d9dcdc2",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:51+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -120,7 +152,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "23648899e8c4ff068c69",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:52+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -137,7 +169,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "2447ca748dfe7da6d196",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:52+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -154,7 +186,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "33ed148138b70f539324",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:53+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -171,7 +203,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "3edc98b7d14fcff33d3c",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:53+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -188,7 +220,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "45147c39842053097e88",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:53+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -205,7 +237,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "572bfb297d9e92b0beac",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -222,7 +254,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "7f0d310a9f3cdfa3ef36",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -239,7 +271,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "884ce48f235ae8d639ee",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -256,7 +288,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "915b7776f04c755b3b02",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -273,7 +305,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "94b4ada4dfd1cd72eebd",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -290,7 +322,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "9a2de5c507e1ec52e7b9",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -307,7 +339,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "9c8b680b2aae5eb5b2be",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -324,7 +356,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "aaf066bac9265fe00ae3",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -341,7 +373,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "acdf134e0c1790916977",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -358,7 +390,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "b548a236a3650fcd7f09",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -375,7 +407,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "ba3030cb58d28012831b",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -392,7 +424,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "bd22969ac95672646443",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -409,7 +441,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "d6625d85ca8f436c72bc",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -426,7 +458,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "e6100be982127b23dfb5",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -443,7 +475,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "e8a4ca17ec565b0f827a",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -460,7 +492,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "ea46ab7da05138bac762",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -477,7 +509,7 @@
       "collected": 0,
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "f88b004b63169ce7c1de",
-      "last_seen": "2026-09-21T20:00:00+00:00",
+      "last_seen": "2026-09-21T20:02:49+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -528,42 +560,84 @@
       "verified": true
     }
   ],
-  "last_scan": "2026-09-21T20:00:01+00:00",
+  "last_scan": "2026-09-21T20:02:53+00:00",
   "observations": [
     {
-      "at": "2026-09-21T20:00:00+00:00",
+      "at": "2026-09-21T20:02:49+00:00",
       "count": 25,
       "result": "ok",
       "source": "Algora public bounties"
     },
     {
-      "at": "2026-09-21T20:00:00+00:00",
+      "at": "2026-09-21T20:02:50+00:00",
       "count": 0,
       "result": "ok",
       "source": "Opire public bounties"
     },
     {
-      "at": "2026-09-21T20:00:01+00:00",
+      "at": "2026-09-21T20:02:50+00:00",
       "count": 1,
       "result": "ok",
-      "source": "track:5b6c1a767f1f44fb50d0"
+      "source": "track:d10522644a4407ad1aad"
     },
     {
-      "at": "2026-09-21T20:00:01+00:00",
+      "at": "2026-09-21T20:02:50+00:00",
       "count": 1,
       "result": "ok",
       "source": "track:d89ea75c81165d3bb511"
     },
     {
-      "at": "2026-09-21T20:00:01+00:00",
+      "at": "2026-09-21T20:02:51+00:00",
       "count": 1,
       "result": "ok",
-      "source": "track:d10522644a4407ad1aad"
+      "source": "track:10ef626d966104dcf4a0"
+    },
+    {
+      "at": "2026-09-21T20:02:51+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:1410a4fed5de6eb83718"
+    },
+    {
+      "at": "2026-09-21T20:02:51+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:1808a0c602aa5d9dcdc2"
+    },
+    {
+      "at": "2026-09-21T20:02:52+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:23648899e8c4ff068c69"
+    },
+    {
+      "at": "2026-09-21T20:02:52+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:2447ca748dfe7da6d196"
+    },
+    {
+      "at": "2026-09-21T20:02:53+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:33ed148138b70f539324"
+    },
+    {
+      "at": "2026-09-21T20:02:53+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:3edc98b7d14fcff33d3c"
+    },
+    {
+      "at": "2026-09-21T20:02:53+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:45147c39842053097e88"
     }
   ],
   "scan_health": "ok",
   "scan_run": {
-    "at": "2026-09-21T20:00:01+00:00",
+    "at": "2026-09-21T20:02:53+00:00",
     "status": "ok"
   },
   "version": 1
