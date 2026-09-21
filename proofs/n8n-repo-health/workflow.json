@@ -1,0 +1,98 @@
+{
+  "name": "Repository API health — independent demonstration",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-start",
+      "name": "Run demo",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.github.com/repos/apb31/maintainerops",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "MaintainerOps-demo"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "fetch-repo",
+      "name": "Fetch public repository",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1000
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $input.first().json;\nconst status = Number(response.statusCode);\nconst body = response.body;\nconst base = { source: \"https://api.github.com/repos/apb31/maintainerops\", observed_at: new Date().toISOString() };\nif (!Number.isInteger(status)) throw new Error(\"Missing HTTP status\");\nif (status !== 200) {\n  return [{json: {...base, ok: false, status, retryable: status === 429 || status >= 500,\n    reason: status === 403 ? \"Access/rate-limit check required\" : \"Upstream non-success response\"}}];\n}\nif (!body || typeof body !== \"object\" || Array.isArray(body) || body.full_name !== \"apb31/maintainerops\")\n  throw new Error(\"Unexpected repository schema or identity\");\nfor (const key of [\"stargazers_count\", \"forks_count\", \"open_issues_count\"])\n  if (!Number.isSafeInteger(body[key]) || body[key] < 0) throw new Error(\"Invalid count: \" + key);\nreturn [{json: {...base, ok: true, repository: body.full_name, stars: body.stargazers_count,\n  forks: body.forks_count, open_issues_and_prs: body.open_issues_count,\n  note: \"GitHub open_issues_count includes pull requests; not a count of issues alone.\"}}];"
+      },
+      "id": "validate-summary",
+      "name": "Validate and summarize",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Run demo": {
+      "main": [
+        [
+          {
+            "node": "Fetch public repository",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch public repository": {
+      "main": [
+        [
+          {
+            "node": "Validate and summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "pinData": {},
+  "tags": []
+}
