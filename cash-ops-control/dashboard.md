@@ -3,6 +3,12 @@
 Updated: 2026-09-21T20:02:53+00:00  
 Scan health: **ok**
 
+## Execution queue
+
+Queued: **5/5** · Leased: **0** · Parked: **0**  
+Accepted/application: **0** · Submitted checks: **1** · Verifications: **4**  
+Next queued work: Collector: Check the official source for feedback or payout status; record the result. [https://github.com/BasedHardware/omi/issues/14576]
+
 ## Financial ledger
 
 | Measure | USD | Meaning |

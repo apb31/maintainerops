@@ -14,13 +14,14 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 STATE = ROOT / "state.json"
 CONFIG = ROOT / "sources.json"
 DASHBOARD = ROOT / "dashboard.md"
+QUEUE = ROOT / "queue.json"
 STATUS_LABELS = ("lead", "qualified", "claimed", "working", "review", "blocked", "submitted", "payout", "rejected")
 ROLE_PIPELINE = (
     ("Scout", "lead"), ("Verifier", "qualified"), ("Claimant", "claimed"),
@@ -28,6 +29,8 @@ ROLE_PIPELINE = (
     ("Collector", "payout"), ("Closer", "rejected"),
 )
 MANUAL_KEYS = {"status", "verified", "accepted_payout", "collected", "spend", "notes", "owner", "tracker_issue_number"}
+MAX_QUEUE_JOBS = 5
+DEFAULT_COOLDOWN_HOURS = 72
 MONEY = re.compile(r"(?:\b(bounty|reward|payout)\b\s*(?:is\s*)?[:=\-]?\s*(?:USD\s*)?\$([\d,]+(?:\.\d{1,2})?)|(?:USD\s*)?\$([\d,]+(?:\.\d{1,2})?)\s*\b(bounty|reward|payout)\b)", re.I)
 VARIABLE = re.compile(r"\b(up\s+to|from|starting\s+at|pool|shared|total\s+prize)\b", re.I)
 TRACKING = {"utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "ref", "source"}
@@ -35,6 +38,20 @@ TRACKING = {"utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content
 
 def now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def timestamp(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return parsed.replace(tzinfo=parsed.tzinfo or timezone.utc).astimezone(timezone.utc)
+    except (TypeError, ValueError):
+        return None
+
+
+def iso(value: datetime) -> str:
+    return value.astimezone(timezone.utc).replace(microsecond=0).isoformat()
 
 
 def clean(value: object, limit: int = 1200) -> str:
@@ -70,7 +87,8 @@ def advertised_payout(text: str) -> float | None:
     return None
 
 
-def candidate(url: str, title: str, summary: str, source: str, opened: bool = True) -> dict:
+def candidate(url: str, title: str, summary: str, source: str, opened: bool = True,
+              source_updated_at: str | None = None, source_comments: int | None = None) -> dict:
     url = canonical_url(url)
     title, summary = clean(title, 240), clean(summary)
     payout = advertised_payout(f"{title} {summary}")
@@ -81,18 +99,22 @@ def candidate(url: str, title: str, summary: str, source: str, opened: bool = Tr
         "payout_basis": "explicit fixed USD text" if payout is not None else "not verified",
         "score": score, "status": "lead", "verified": False,
         "accepted_payout": None, "collected": 0, "first_seen": now(), "last_seen": now(),
+        "source_updated_at": clean(source_updated_at, 80) or None,
+        "source_comments": source_comments if isinstance(source_comments, int) and source_comments >= 0 else None,
     }
 
 
 def parse_github(payload: bytes, source: str) -> list[dict]:
     data = json.loads(payload)
-    return [candidate(row.get("html_url", ""), row.get("title", ""), row.get("body", ""), source, row.get("state") == "open")
+    return [candidate(row.get("html_url", ""), row.get("title", ""), row.get("body", ""), source, row.get("state") == "open",
+                      row.get("updated_at"), row.get("comments"))
             for row in data.get("items", []) if row.get("html_url")]
 
 
 def parse_github_issue(payload: bytes, source: str) -> list[dict]:
     row = json.loads(payload)
-    return [candidate(row.get("html_url", ""), row.get("title", ""), row.get("body", ""), source, row.get("state") == "open")] if row.get("html_url") else []
+    return [candidate(row.get("html_url", ""), row.get("title", ""), row.get("body", ""), source, row.get("state") == "open",
+                      row.get("updated_at"), row.get("comments"))] if row.get("html_url") else []
 
 
 def _node_text(node: ET.Element, names: tuple[str, ...]) -> str:
@@ -171,10 +193,123 @@ def merge_items(existing: list[dict], found: list[dict]) -> list[dict]:
         old = merged.get(fresh["id"], {})
         if "verified" not in old and "human_verified" in old:
             old["verified"] = bool(old["human_verified"])
-        kept = {key: old[key] for key in MANUAL_KEYS if key in old}
+        # Start with the old record so execution checkpoints and future manual
+        # fields survive. Fresh discovery data replaces only scanner-owned keys.
+        kept = dict(old)
+        kept.update(fresh)
+        for key in MANUAL_KEYS:
+            if key in old:
+                kept[key] = old[key]
         fresh["first_seen"] = old.get("first_seen", fresh["first_seen"])
-        merged[fresh["id"]] = {**fresh, **kept}
+        kept["first_seen"] = fresh["first_seen"]
+        merged[fresh["id"]] = kept
     return sorted(merged.values(), key=lambda row: (row.get("status", "lead"), row.get("id", "")))
+
+
+def source_fingerprint(item: dict) -> str:
+    """Fingerprint only material source facts, excluding scan timestamps and operator data."""
+    material = {key: item.get(key) for key in ("url", "title", "summary", "source", "open", "advertised_payout", "payout_basis", "source_updated_at", "source_comments")}
+    encoded = json.dumps(material, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(encoded.encode()).hexdigest()[:24]
+
+
+def job_id(item: dict, kind: str) -> str:
+    return f"{kind}-{item['id']}"
+
+
+def _job(item: dict, kind: str, role: str, action: str, rank: int) -> dict:
+    return {
+        "id": job_id(item, kind), "item_id": item["id"], "source_url": item["url"],
+        "source_fingerprint": source_fingerprint(item), "kind": kind, "role": role,
+        "status": item.get("status", "lead"), "priority": rank, "safe_next_action": action,
+    }
+
+
+def build_queue(state: dict, at: datetime | None = None, max_jobs: int = MAX_QUEUE_JOBS) -> tuple[dict, bool]:
+    """Build the bounded work queue and expire stale leases in state."""
+    at = (at or datetime.now(timezone.utc)).astimezone(timezone.utc).replace(microsecond=0)
+    changed = False
+    accepted, followups, verifications = [], [], []
+    accepted_actions = {
+        "qualified": ("Claimant", "Apply or claim through the official source using only the verified assignment rules."),
+        "claimed": ("Builder", "Work only on the verified, accepted scope recorded for this source."),
+        "working": ("Builder", "Continue the verified, accepted scope and save a reviewable checkpoint."),
+        "review": ("Reviewer", "Review the completed work against the verified source requirements."),
+    }
+    for item in state.get("items", []):
+        status, execution = item.get("status", "lead"), item.setdefault("execution", {})
+        lease = execution.get("lease")
+        if lease and (timestamp(lease.get("expires_at")) or datetime.min.replace(tzinfo=timezone.utc)) <= at:
+            execution.pop("lease", None); changed = True; lease = None
+        if lease or execution.get("parked") or status in ("blocked", "rejected", "payout"):
+            continue
+        fingerprint = source_fingerprint(item)
+        due = timestamp(execution.get("next_due_at"))
+        cooldown = timestamp(execution.get("cooldown_until"))
+        fingerprint_changed = bool(execution.get("completed_fingerprint") and execution.get("completed_fingerprint") != fingerprint)
+        explicitly_due = bool(due and due <= at)
+        if cooldown and cooldown > at and not fingerprint_changed:
+            continue
+        selected = None
+        if status in accepted_actions and item.get("verified") and (status == "qualified" or money(item.get("accepted_payout")) > 0):
+            if not item.get("open", True) and status == "qualified":
+                continue
+            role, action = accepted_actions[status]
+            kind = "application" if status == "qualified" else "accepted-work"
+            selected = (_job(item, kind, role, action, 300 if kind == "accepted-work" else 250), item)
+        elif status == "submitted":
+            action = "Check the official source for feedback or payout status; record the result."
+            selected = (_job(item, "submitted-check", "Collector", action, 200), item)
+        elif status == "lead" and item.get("open", True):
+            action = "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules."
+            selected = (_job(item, "verify", "Verifier", action, 100), item)
+        if not selected:
+            continue
+        kind = selected[0]["kind"]
+        if (execution.get("completed_fingerprint") == fingerprint and execution.get("completed_kind") == kind
+                and execution.get("completed_status") == status
+                and not explicitly_due):
+            continue
+        if kind in ("accepted-work", "application"):
+            accepted.append(selected)
+        elif kind == "submitted-check":
+            followups.append(selected)
+        else:
+            verifications.append(selected)
+
+    def sort_key(pair: tuple[dict, dict]) -> tuple:
+        job, item = pair
+        return (-job["priority"], -money(item.get("accepted_payout")), -money(item.get("advertised_payout")), -float(item.get("score", 0)), job["id"])
+
+    accepted.sort(key=sort_key); followups.sort(key=sort_key); verifications.sort(key=sort_key)
+    chosen = accepted[:max_jobs]
+    remaining = max_jobs - len(chosen)
+    # Cap recurring checks at two so unchanged submissions cannot permanently
+    # starve new verification work from a five-slot queue.
+    chosen += followups[:min(2, remaining)]
+    remaining = max_jobs - len(chosen)
+    chosen += verifications[:remaining]
+    remaining = max_jobs - len(chosen)
+    if remaining:
+        chosen += followups[2:2 + remaining]
+    jobs = [pair[0] for pair in chosen[:max_jobs]]
+    queue = {
+        "version": 1, "generated_at": iso(at), "max_jobs": max_jobs, "jobs": jobs,
+        "counts": {"queued": len(jobs), "accepted_work": sum(j["kind"] in ("accepted-work", "application") for j in jobs),
+                   "submitted_checks": sum(j["kind"] == "submitted-check" for j in jobs),
+                   "verifications": sum(j["kind"] == "verify" for j in jobs),
+                   "leased": sum(bool(x.get("execution", {}).get("lease")) for x in state.get("items", [])),
+                   "parked": sum(bool(x.get("execution", {}).get("parked")) for x in state.get("items", []))},
+    }
+    return queue, changed
+
+
+def write_queue(state: dict, path: Path = QUEUE, at: datetime | None = None) -> dict:
+    queue, changed = build_queue(state, at)
+    if changed:
+        atomic_json(path.parent / "state.json", state)
+    atomic_json(path, queue)
+    return queue
 
 
 def scan(config_path: Path = CONFIG, state_path: Path = STATE) -> dict:
@@ -189,9 +324,11 @@ def scan(config_path: Path = CONFIG, state_path: Path = STATE) -> dict:
         sources.append((row["name"], f"https://api.github.com/search/issues?{query}", parse_github))
     for row in cfg.get("rss", []):
         if row.get("enabled", True): sources.append((row["name"], row["url"], parse_rss))
-    for row in state.get("items", []):
+    track_priority = {"submitted": 5, "review": 4, "working": 3, "claimed": 2, "qualified": 1, "lead": 0}
+    trackable = sorted(state.get("items", []), key=lambda x: (track_priority.get(x.get("status", "lead"), -1), money(x.get("accepted_payout"))), reverse=True)
+    for row in trackable:
         match = re.fullmatch(r"https://github\.com/([^/]+)/([^/]+)/issues/(\d+)", row.get("url", ""))
-        if match and row.get("status", "lead") not in ("payout", "rejected"):
+        if match and row.get("status", "lead") not in ("blocked", "payout", "rejected"):
             owner, repo, number = match.groups()
             sources.append((f"track:{row['id']}", f"https://api.github.com/repos/{owner}/{repo}/issues/{number}",
                             lambda payload, _name, original=row.get("source", "tracked GitHub issue"): parse_github_issue(payload, original)))
@@ -215,8 +352,10 @@ def scan(config_path: Path = CONFIG, state_path: Path = STATE) -> dict:
     state["observations"], state["errors"], state["last_scan"] = observations, errors, now()
     state["scan_health"] = "failed" if sources and errors and not observations else "partial" if errors else "ok"
     state["scan_run"] = {"at": state["last_scan"], "status": state["scan_health"]}
+    queue, _ = build_queue(state)
     atomic_json(state_path, state)
-    write_dashboard(state, state_path.parent / "dashboard.md")
+    atomic_json(state_path.parent / "queue.json", queue)
+    write_dashboard(state, state_path.parent / "dashboard.md", queue)
     return state
 
 
@@ -235,7 +374,97 @@ def next_action(items: list[dict]) -> str:
     return f"{order[row['status']]}: [{clean(row.get('title'), 100)}]({row.get('url')})"
 
 
-def write_dashboard(state: dict, path: Path = DASHBOARD) -> None:
+def _save_operational(state: dict, state_path: Path, queue_path: Path, at: datetime) -> dict:
+    queue, _ = build_queue(state, at)
+    atomic_json(state_path, state)
+    atomic_json(queue_path, queue)
+    write_dashboard(state, state_path.parent / "dashboard.md", queue)
+    return queue
+
+
+def claim_job(job: str, owner: str, lease_minutes: int = 60, state_path: Path = STATE,
+              queue_path: Path = QUEUE, at: datetime | None = None) -> dict:
+    at = (at or datetime.now(timezone.utc)).astimezone(timezone.utc).replace(microsecond=0)
+    if not clean(owner, 80):
+        raise ValueError("owner is required")
+    if not 5 <= lease_minutes <= 1440:
+        raise ValueError("lease minutes must be between 5 and 1440")
+    state = load(state_path, {"items": []})
+    queue, _ = build_queue(state, at)
+    queued = next((row for row in queue["jobs"] if row["id"] == job), None)
+    if not queued:
+        raise RuntimeError("job is not currently claimable")
+    item = next((row for row in state.get("items", []) if row.get("id") == queued["item_id"]), None)
+    if not item or source_fingerprint(item) != queued["source_fingerprint"]:
+        raise RuntimeError("job source changed; regenerate the queue before claiming")
+    lease = {"owner": clean(owner, 80), "claimed_at": iso(at), "expires_at": iso(at + timedelta(minutes=lease_minutes))}
+    execution = item.setdefault("execution", {})
+    execution["lease"] = lease
+    execution["current_job"] = {key: queued[key] for key in ("id", "kind", "source_fingerprint")}
+    _save_operational(state, state_path, queue_path, at)
+    return {**queued, "lease": lease}
+
+
+def record_job(job: str, outcome: str, owner: str = "", note: str = "", checkpoint: str = "",
+               next_due_at: str = "", cooldown_hours: float | None = None, state_path: Path = STATE,
+               queue_path: Path = QUEUE, at: datetime | None = None) -> dict:
+    allowed = {"done", "checkpoint", "failed", "verification-failed", "rejected"}
+    if outcome not in allowed:
+        raise ValueError(f"outcome must be one of: {', '.join(sorted(allowed))}")
+    at = (at or datetime.now(timezone.utc)).astimezone(timezone.utc).replace(microsecond=0)
+    state = load(state_path, {"items": []})
+    item = next((row for row in state.get("items", []) if row.get("execution", {}).get("current_job", {}).get("id") == job), None)
+    if not item:
+        raise RuntimeError("job has no recorded lease")
+    execution = item.setdefault("execution", {})
+    lease, current = execution.get("lease", {}), execution.get("current_job", {})
+    if not lease or not timestamp(lease.get("expires_at")) or timestamp(lease.get("expires_at")) <= at:
+        execution.pop("lease", None)
+        _save_operational(state, state_path, queue_path, at)
+        raise RuntimeError("job lease expired")
+    if owner and clean(owner, 80) != lease.get("owner"):
+        raise RuntimeError("job is leased to another owner")
+    if source_fingerprint(item) != current.get("source_fingerprint"):
+        execution.pop("lease", None)
+        execution.pop("current_job", None)
+        _save_operational(state, state_path, queue_path, at)
+        raise RuntimeError("job source changed after claim; lease released without recording an outcome")
+    due = timestamp(next_due_at)
+    if next_due_at and not due:
+        raise ValueError("next due time must be ISO-8601")
+    if cooldown_hours is not None and not 0 <= cooldown_hours <= 24 * 365:
+        raise ValueError("cooldown hours must be between 0 and 8760")
+    execution.update({"last_outcome": outcome, "last_outcome_at": iso(at), "last_note": clean(note, 500)})
+    if checkpoint:
+        execution["checkpoint"] = {"at": iso(at), "summary": clean(checkpoint, 500)}
+    if not due and current.get("kind") == "submitted-check" and outcome == "done":
+        due = at + timedelta(hours=DEFAULT_COOLDOWN_HOURS if cooldown_hours is None else cooldown_hours)
+    if due:
+        execution["next_due_at"] = iso(due)
+    else:
+        execution.pop("next_due_at", None)
+    default_cooldown = DEFAULT_COOLDOWN_HOURS if current.get("kind") == "submitted-check" or outcome in ("checkpoint", "failed") else 0
+    hours = default_cooldown if cooldown_hours is None else cooldown_hours
+    if hours:
+        execution["cooldown_until"] = iso(at + timedelta(hours=hours))
+    else:
+        execution.pop("cooldown_until", None)
+    if outcome == "done":
+        execution["completed_fingerprint"] = current["source_fingerprint"]
+        execution["completed_kind"] = current["kind"]
+        execution["completed_status"] = item.get("status", "lead")
+    elif outcome in ("verification-failed", "rejected"):
+        execution["parked"] = True
+        execution["parked_reason"] = outcome
+        if outcome == "rejected":
+            item["status"] = "rejected"
+    execution["last_job"] = current
+    execution.pop("lease", None); execution.pop("current_job", None)
+    queue = _save_operational(state, state_path, queue_path, at)
+    return {"job_id": job, "item_id": item["id"], "outcome": outcome, "queue_size": len(queue["jobs"])}
+
+
+def write_dashboard(state: dict, path: Path = DASHBOARD, queue: dict | None = None) -> None:
     items = state.get("items", [])
     advertised = sum(money(x.get("advertised_payout")) for x in items if x.get("status") != "rejected" and x.get("open", True))
     accepted = sum(money(x.get("accepted_payout")) for x in items)
@@ -245,7 +474,13 @@ def write_dashboard(state: dict, path: Path = DASHBOARD) -> None:
     active = sum(money(x.get("accepted_payout")) for x in items if x.get("status") in ("claimed", "working", "review", "blocked", "submitted"))
     claims = sum(x.get("status") in ("claimed", "working", "review", "submitted") or (x.get("status") == "blocked" and x.get("application_submitted", False)) for x in items)
     counts = {status: sum(x.get("status") == status for x in items) for status in STATUS_LABELS}
-    lines = ["# Cash Ops Control", "", f"Updated: {state.get('last_scan', 'never')}  ", f"Scan health: **{state.get('scan_health', 'not run')}**", "", "## Financial ledger", "",
+    queue = queue or load(path.parent / "queue.json", {"jobs": [], "counts": {}})
+    qcounts, jobs = queue.get("counts", {}), queue.get("jobs", [])
+    next_work = (f"{jobs[0].get('role')}: {jobs[0].get('safe_next_action')} [{jobs[0].get('source_url')}]" if jobs else "No claimable queued work.")
+    lines = ["# Cash Ops Control", "", f"Updated: {state.get('last_scan', 'never')}  ", f"Scan health: **{state.get('scan_health', 'not run')}**", "", "## Execution queue", "",
+             f"Queued: **{len(jobs)}/{queue.get('max_jobs', MAX_QUEUE_JOBS)}** · Leased: **{qcounts.get('leased', 0)}** · Parked: **{qcounts.get('parked', 0)}**  ",
+             f"Accepted/application: **{qcounts.get('accepted_work', 0)}** · Submitted checks: **{qcounts.get('submitted_checks', 0)}** · Verifications: **{qcounts.get('verifications', 0)}**  ",
+             f"Next queued work: {next_work}", "", "## Financial ledger", "",
              "| Measure | USD | Meaning |", "|---|---:|---|", f"| Advertised | ${advertised:,.2f} | Public fixed amounts observed; not earned |",
              f"| Accepted | ${accepted:,.2f} | Operator-recorded agreed payouts; not yet cash |", f"| Collected | ${collected:,.2f} | Operator-recorded money received |",
              f"| Pending payout | ${pending:,.2f} | Accepted less recorded collection, floored per item |", f"| Active paid work | ${active:,.2f} | Accepted value in active work stages |",
@@ -278,17 +513,21 @@ def sync_issues(config_path: Path = CONFIG, state_path: Path = STATE) -> None:
         except RuntimeError as exc:
             if "HTTP 422" not in str(exc): raise
     tracked = api(repo, "/issues?state=all&per_page=100", "GET", None, token)
-    markers = {}
+    markers, by_number = {}, {}
     for issue in tracked if isinstance(tracked, list) else []:
+        by_number[issue["number"]] = issue
         found = re.search(r"<!-- cash-ops:([a-f0-9]{20}) -->", issue.get("body") or "")
-        if found: markers[found.group(1)] = issue["number"]
+        if found: markers[found.group(1)] = issue
     eligible = [row for row in state.get("items", []) if row.get("status", "lead") not in ("payout", "rejected") and (row.get("verified") or row.get("status") != "lead")]
     for row in sorted(eligible, key=lambda x: (x.get("score", 0), money(x.get("advertised_payout"))), reverse=True)[:5]:
         status = row.get("status", "lead") if row.get("status") in STATUS_LABELS else "lead"
         body = f"<!-- cash-ops:{row['id']} -->\nPublic source: {row['url']}\n\nAdvertised payout: {row.get('advertised_payout')} USD\nVerification: {'operator verified' if row.get('verified') else 'required before outreach or claim'}\nScore: {row.get('score', 0)}/100\n"
         data = {"title": f"[Cash Ops] {clean(row.get('title'), 180)}", "body": body, "labels": [status]}
-        number = row.get("tracker_issue_number") or markers.get(row["id"])
-        result = api(repo, f"/issues/{number}" if number else "/issues", "PATCH" if number else "POST", data, token)
+        existing = by_number.get(row.get("tracker_issue_number")) or markers.get(row["id"])
+        number = existing.get("number") if existing else row.get("tracker_issue_number")
+        current_labels = sorted(x.get("name") for x in existing.get("labels", [])) if existing else []
+        unchanged = existing and existing.get("title") == data["title"] and existing.get("body") == data["body"] and current_labels == sorted(data["labels"])
+        result = existing if unchanged else api(repo, f"/issues/{number}" if number else "/issues", "PATCH" if number else "POST", data, token)
         if not number:
             row["tracker_issue_number"] = result["number"]
             atomic_json(state_path, state)
@@ -300,12 +539,26 @@ def sync_issues(config_path: Path = CONFIG, state_path: Path = STATE) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("scan", "report", "sync-issues"), nargs="?", default="scan")
+    sub = parser.add_subparsers(dest="command")
+    sub.add_parser("scan"); sub.add_parser("report"); sub.add_parser("sync-issues")
+    claim = sub.add_parser("claim", help="claim one queued job with an expiring lease")
+    claim.add_argument("job_id"); claim.add_argument("--owner", required=True); claim.add_argument("--lease-minutes", type=int, default=60)
+    record = sub.add_parser("record", help="record a leased job outcome and optional checkpoint")
+    record.add_argument("job_id"); record.add_argument("--outcome", required=True,
+                        choices=("done", "checkpoint", "failed", "verification-failed", "rejected"))
+    record.add_argument("--owner", default=""); record.add_argument("--note", default="")
+    record.add_argument("--checkpoint", default=""); record.add_argument("--next-due-at", default="")
+    record.add_argument("--cooldown-hours", type=float)
     args = parser.parse_args()
     try:
-        if args.command == "scan": scan()
-        elif args.command == "report": write_dashboard(load(STATE, {}))
-        else: sync_issues()
+        if args.command in (None, "scan"): scan()
+        elif args.command == "report":
+            state = load(STATE, {}); queue = write_queue(state); write_dashboard(state, DASHBOARD, queue)
+        elif args.command == "sync-issues": sync_issues()
+        elif args.command == "claim": print(json.dumps(claim_job(args.job_id, args.owner, args.lease_minutes), sort_keys=True))
+        else:
+            print(json.dumps(record_job(args.job_id, args.outcome, args.owner, args.note, args.checkpoint,
+                                        args.next_due_at, args.cooldown_hours), sort_keys=True))
         return 0
     except Exception as exc:
         print(f"cash-ops-control: {exc}", file=sys.stderr); return 1
