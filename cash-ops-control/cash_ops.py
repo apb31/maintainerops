@@ -226,7 +226,7 @@ def money(value: object) -> float:
 
 
 def next_action(items: list[dict]) -> str:
-    order = {"lead": "Verify", "qualified": "Claim", "claimed": "Start", "working": "Finish", "review": "Review", "blocked": "Unblock", "submitted": "Check payout"}
+    order = {"lead": "Verify", "qualified": "Claim", "claimed": "Start", "working": "Finish", "review": "Review", "blocked": "Unblock", "submitted": "Check response/acceptance"}
     priority = {"working": 7, "review": 6, "submitted": 5, "claimed": 4, "blocked": 3, "qualified": 2, "lead": 1}
     rows = [x for x in items if x.get("status") in order]
     if not rows: return "No active lead. Review source errors or wait for the next scan."
@@ -237,13 +237,13 @@ def next_action(items: list[dict]) -> str:
 
 def write_dashboard(state: dict, path: Path = DASHBOARD) -> None:
     items = state.get("items", [])
-    advertised = sum(money(x.get("advertised_payout")) for x in items)
+    advertised = sum(money(x.get("advertised_payout")) for x in items if x.get("status") != "rejected" and x.get("open", True))
     accepted = sum(money(x.get("accepted_payout")) for x in items)
     collected = sum(money(x.get("collected")) for x in items)
     spend = sum(money(x.get("spend")) for x in items)
     pending = sum(max(0, money(x.get("accepted_payout")) - money(x.get("collected"))) for x in items)
     active = sum(money(x.get("accepted_payout")) for x in items if x.get("status") in ("claimed", "working", "review", "blocked", "submitted"))
-    claims = sum(x.get("status") in ("claimed", "working", "review", "blocked", "submitted") for x in items)
+    claims = sum(x.get("status") in ("claimed", "working", "review", "submitted") or (x.get("status") == "blocked" and x.get("application_submitted", False)) for x in items)
     counts = {status: sum(x.get("status") == status for x in items) for status in STATUS_LABELS}
     lines = ["# Cash Ops Control", "", f"Updated: {state.get('last_scan', 'never')}  ", f"Scan health: **{state.get('scan_health', 'not run')}**", "", "## Financial ledger", "",
              "| Measure | USD | Meaning |", "|---|---:|---|", f"| Advertised | ${advertised:,.2f} | Public fixed amounts observed; not earned |",
