@@ -5,9 +5,9 @@ Scan health: **ok**
 
 ## Execution queue
 
-Queued: **5/5** · Leased: **0** · Parked: **0**  
-Accepted/application: **0** · Submitted checks: **0** · Verifications: **5**  
-Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://github.com/ale-helper-bot/agent-prettier-rs/issues/1]
+Queued: **4/5** · Leased: **1** · Parked: **0**  
+Accepted/application: **0** · Submitted checks: **0** · Verifications: **4**  
+Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://github.com/anatolykoptev/go-job/issues/348]
 
 ## Financial ledger
 
