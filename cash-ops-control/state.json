@@ -106,12 +106,16 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
-        "lease": {
-          "owner": "hourly-executor",
-          "claimed_at": "2026-09-21T21:32:10+00:00",
-          "expires_at": "2026-09-21T22:32:10+00:00"
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-21T21:44:00+00:00",
+        "last_note": "Verified against https://algora.io/challenges/prettier and source issue; not assignable, no open payout.",
+        "checkpoint": {
+          "at": "2026-09-21T21:44:00+00:00",
+          "summary": "Official challenge lists a winner; source is an existing participant's submission memo. Rejected without outreach or spend."
         },
-        "current_job": {
+        "parked": true,
+        "parked_reason": "rejected",
+        "last_job": {
           "id": "verify-10ef626d966104dcf4a0",
           "kind": "verify",
           "source_fingerprint": "e2d7599141d105783bd85044"
@@ -121,16 +125,17 @@
       "id": "10ef626d966104dcf4a0",
       "last_seen": "2026-09-21T20:37:30+00:00",
       "open": true,
-      "payout_basis": "not verified",
+      "payout_basis": "No available payout: official challenge lists a winner and the first-successful award is fulfilled.",
       "score": 35,
       "source": "Algora public bounties",
       "source_comments": 3,
       "source_updated_at": "2026-07-16T11:01:52Z",
-      "status": "lead",
+      "status": "rejected",
       "summary": "# Submission Memo — Agent Prettier-RS > Copy-paste this verbatim (or edit lightly) into the Algora submission form at > https://algora.io/challenges/prettier/submissions/new --- ## Project **agent-prettier-rs** — A Rust pretty-printer for JavaScript that passes **91 of the 100 prettier 3.10-dev sample files** (94% among parseable inputs). Repo: `github.com/<user>/agent-prettier-rs` (public, MIT, scaffolded from `gumroad-bounty-starter-kit-v0.2/examples/rust-scaffold/`). ## What it does Takes a JavaScript source string, parses it via `tree-sitter-javascript` + `tree-sitter-typescript`, then formats the AST using a 5-stage dispatcher: - **Stage 1**: parser entry point (`parse()` + `cursor_dump()`) - **Stage 2**: leaf printers (identifier, number, string, true/false/null, regex, comment, punctuation) - **Stage 3**: statement printers (18 handlers covering block, lexical, expression, if, return, for, while, do, switch, try, throw, break, continue, debugger, empty, import, export, labeled) - **Stage 4**: expression printers (binary, unary, member, call, update, assignment, conditional, new, array, template) - **Stage 5**: operator-precedence parenthesizing (in progress, target 95/100) #",
       "title": "Algora Prettier submission — agent-prettier-rs, 91% corpus pass-rate",
       "url": "https://github.com/ale-helper-bot/agent-prettier-rs/issues/1",
-      "verified": false
+      "verified": true,
+      "notes": "False positive: the GitHub issue is the owner's own submission memo, not an assignable bounty. Algora's official Prettier challenge lists a winner; its first-successful-solution award has already been fulfilled."
     },
     {
       "accepted_payout": null,

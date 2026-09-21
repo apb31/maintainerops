@@ -5,7 +5,7 @@ Scan health: **ok**
 
 ## Execution queue
 
-Queued: **4/5** · Leased: **1** · Parked: **0**  
+Queued: **4/5** · Leased: **0** · Parked: **1**  
 Accepted/application: **0** · Submitted checks: **0** · Verifications: **4**  
 Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://github.com/anatolykoptev/go-job/issues/348]
 
@@ -30,7 +30,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 | Status | Count |
 |---|---:|
-| lead | 25 |
+| lead | 24 |
 | qualified | 0 |
 | claimed | 0 |
 | working | 0 |
@@ -38,7 +38,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 | blocked | 3 |
 | submitted | 0 |
 | payout | 0 |
-| rejected | 1 |
+| rejected | 2 |
 
 ## Source observations
 
