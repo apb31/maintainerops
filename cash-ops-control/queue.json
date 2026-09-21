@@ -1,25 +1,14 @@
 {
   "counts": {
-    "queued": 4,
+    "queued": 3,
     "accepted_work": 0,
     "submitted_checks": 0,
-    "verifications": 4,
-    "leased": 0,
+    "verifications": 3,
+    "leased": 1,
     "parked": 1
   },
-  "generated_at": "2026-09-21T21:44:00+00:00",
+  "generated_at": "2026-09-21T21:49:11+00:00",
   "jobs": [
-    {
-      "id": "verify-1410a4fed5de6eb83718",
-      "item_id": "1410a4fed5de6eb83718",
-      "kind": "verify",
-      "priority": 100,
-      "role": "Verifier",
-      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "da83444236b286bc5b96de05",
-      "source_url": "https://github.com/anatolykoptev/go-job/issues/348",
-      "status": "lead"
-    },
     {
       "id": "verify-1808a0c602aa5d9dcdc2",
       "item_id": "1808a0c602aa5d9dcdc2",
