@@ -4,6 +4,7 @@ import argparse
 import json
 import sys
 
+from .formatters import report_to_csv
 from .github import issues, latest_release, pulls, repo
 from .report import build_report
 
@@ -15,7 +16,9 @@ def parser() -> argparse.ArgumentParser:
     )
     p.add_argument("repository", help="GitHub repository in owner/name form")
     p.add_argument("--stale-days", type=int, default=30, help="Age in days used to mark work as stale")
-    p.add_argument("--json", action="store_true", help="Output machine-readable JSON")
+    output = p.add_mutually_exclusive_group()
+    output.add_argument("--json", action="store_true", help="Output machine-readable JSON")
+    output.add_argument("--csv", action="store_true", help="Output a single-row CSV report")
     return p
 
 
@@ -44,6 +47,10 @@ def main() -> None:
 
     if args.json:
         print(json.dumps(report, indent=2, sort_keys=True))
+        return
+
+    if args.csv:
+        print(report_to_csv(report), end="")
         return
 
     print(f"Repository: {report['repository']}")
