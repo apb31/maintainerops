@@ -6,8 +6,8 @@ Scan health: **ok**
 ## Execution queue
 
 Queued: **5/5** · Leased: **0** · Parked: **0**  
-Accepted/application: **0** · Submitted checks: **1** · Verifications: **4**  
-Next queued work: Collector: Check the official source for feedback or payout status; record the result. [https://github.com/BasedHardware/omi/issues/14576]
+Accepted/application: **0** · Submitted checks: **0** · Verifications: **5**  
+Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://github.com/ale-helper-bot/agent-prettier-rs/issues/1]
 
 ## Financial ledger
 
@@ -21,8 +21,8 @@ Next queued work: Collector: Check the official source for feedback or payout st
 | Spend | $0.00 | Operator-recorded costs |
 | Net | $0.00 | Recorded collection less recorded spend |
 
-Applications/claims in progress: **1**  
-Best next action: Check response/acceptance: [[Bounty proposal] docs(cli): Spanish agent quickstart and CSV export guide ($60 proposed)](https://github.com/BasedHardware/omi/issues/14576)  
+Applications/claims in progress: **0**  
+Best next action: Unblock: [[FEATURE] share daily (week day only) jobs on twitter](https://github.com/golang-cafe/job-board/issues/97)  
 External worker status: latest scan run **ok** at 2026-09-21T20:37:32+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
@@ -35,8 +35,8 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 | claimed | 0 |
 | working | 0 |
 | review | 0 |
-| blocked | 2 |
-| submitted | 1 |
+| blocked | 3 |
+| submitted | 0 |
 | payout | 0 |
 | rejected | 1 |
 
