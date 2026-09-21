@@ -68,3 +68,10 @@ Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## License
 
 MIT
+
+## Practical demos
+
+- [CSV Rescue: local CSV cleanup](https://ap-csv-rescue.angelcap.chatgpt.site)
+- [SPARK GRID: fictional dispatch game](https://spark-grid-simulation.angelcap.chatgpt.site)
+- [Experiment scope and validation](proofs/cash-ops-experiments.md)
+- [Cash Ops Control: bounded public-source monitoring](cash-ops-control/README.md)

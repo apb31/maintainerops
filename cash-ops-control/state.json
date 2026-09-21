@@ -1,0 +1,91 @@
+{
+  "cache": {},
+  "errors": [],
+  "items": [
+    {
+      "accepted_payout": null,
+      "advertised_payout": null,
+      "collected": 0,
+      "first_seen": "2026-09-21T19:59:31+00:00",
+      "id": "5b6c1a767f1f44fb50d0",
+      "last_seen": "2026-09-21T19:59:31+00:00",
+      "notes": "Proposal only; do not invoice or count pending payout without approval.",
+      "open": true,
+      "payout_basis": "not verified",
+      "score": 35,
+      "source": "verified public import",
+      "spend": 0,
+      "status": "submitted",
+      "summary": "Proposed documentation bounty; no funding approval verified",
+      "title": "Omi Spanish quickstart proposal",
+      "url": "https://github.com/BasedHardware/omi/issues/14576",
+      "verified": true
+    },
+    {
+      "accepted_payout": null,
+      "advertised_payout": 50,
+      "collected": 0,
+      "first_seen": "2026-09-21T19:59:31+00:00",
+      "id": "8ff314e8a9fbbbaaad92",
+      "last_seen": "2026-09-21T19:59:31+00:00",
+      "notes": "Closed to new claims in maintainer issue body.",
+      "open": true,
+      "payout_basis": "not verified",
+      "score": 35,
+      "source": "verified public import",
+      "spend": 0,
+      "status": "rejected",
+      "summary": "Single reward already awarded to another contributor",
+      "title": "KushBitx SDK integration",
+      "url": "https://github.com/kushBitxHQ/kushbitx-sdk/issues/1",
+      "verified": true
+    },
+    {
+      "accepted_payout": null,
+      "advertised_payout": null,
+      "collected": 0,
+      "first_seen": "2026-09-21T19:59:31+00:00",
+      "id": "d89ea75c81165d3bb511",
+      "last_seen": "2026-09-21T19:59:31+00:00",
+      "notes": "Not eligible for autonomous AI fulfillment under published rules.",
+      "open": true,
+      "payout_basis": "not verified",
+      "score": 35,
+      "source": "verified public import",
+      "spend": 0,
+      "status": "blocked",
+      "summary": "Task explicitly requires human judging and no automated AI",
+      "title": "Human judging assignment",
+      "url": "https://github.com/attogram/fantastic-octo-giggle/issues/6",
+      "verified": true
+    },
+    {
+      "accepted_payout": null,
+      "advertised_payout": 100,
+      "collected": 0,
+      "first_seen": "2026-09-21T19:59:31+00:00",
+      "id": "d10522644a4407ad1aad",
+      "last_seen": "2026-09-21T19:59:31+00:00",
+      "notes": "Do not duplicate work; eligibility of remaining scope unconfirmed.",
+      "open": true,
+      "payout_basis": "explicit fixed USD text",
+      "score": 80,
+      "source": "verified public import",
+      "spend": 0,
+      "status": "blocked",
+      "summary": "Bounty $100; multiple competing PRs already submitted",
+      "title": "Twitter API v2 scheduler",
+      "url": "https://github.com/golang-cafe/job-board/issues/97",
+      "verified": true
+    }
+  ],
+  "observations": [
+    {
+      "at": "2026-09-21T19:59:31+00:00",
+      "count": 4,
+      "result": "reviewed",
+      "source": "public GitHub import"
+    }
+  ],
+  "version": 1
+}

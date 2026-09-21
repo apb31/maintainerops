@@ -1,0 +1,51 @@
+name: Cash Ops scan
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "cash-ops-control/**"
+      - ".github/workflows/cash-ops.yml"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: cash-ops-control
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Start from current branch state
+        run: git pull --rebase origin "$GITHUB_REF_NAME"
+      - name: Test and scan public sources
+        working-directory: cash-ops-control
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python -m unittest discover -s tests -v
+          python cash_ops.py scan
+          if python -c "import json; raise SystemExit(not bool(json.load(open('sources.json'))['issue_repo']))"; then
+            python cash_ops.py sync-issues
+          fi
+      - name: Preserve current remote state and publish scan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cash-ops-control/state.json cash-ops-control/dashboard.md
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update cash ops scan [skip ci]"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

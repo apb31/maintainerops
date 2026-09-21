@@ -1,0 +1,17 @@
+{
+  "timeout_seconds": 15,
+  "issue_repo": "apb31/maintainerops",
+  "github_searches": [
+    {
+      "name": "Algora public bounties",
+      "query": "is:issue is:open \"algora.io\" in:body",
+      "limit": 30
+    },
+    {
+      "name": "Opire public bounties",
+      "query": "is:issue is:open \"opire.dev\" in:body",
+      "limit": 30
+    }
+  ],
+  "rss": []
+}
