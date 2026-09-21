@@ -8,7 +8,7 @@ It helps maintainers quickly see:
 - stale issues and stale pull requests
 - repository stars and forks
 - latest release and release age
-- JSON output for scripts and automation
+- JSON or CSV output for scripts, spreadsheets, and automation
 
 ## Install
 
@@ -25,6 +25,7 @@ python -m pip install -e .
 ```bash
 maintainerops psf/requests
 maintainerops openai/openai-python --json
+maintainerops owner/repo --csv
 maintainerops owner/repo --stale-days 45
 ```
 
@@ -50,7 +51,6 @@ Open-source maintainers often spend time collecting context before deciding what
 
 - pagination and contributor activity summaries
 - label and milestone health checks
-- CSV export
 - CI failure summaries
 - issue clustering
 - release-note assistance
