@@ -7,7 +7,7 @@
     "submitted_checks": 1,
     "verifications": 4
   },
-  "generated_at": "2026-09-21T20:37:07+00:00",
+  "generated_at": "2026-09-21T20:37:32+00:00",
   "jobs": [
     {
       "id": "submitted-check-5b6c1a767f1f44fb50d0",
@@ -16,7 +16,7 @@
       "priority": 200,
       "role": "Collector",
       "safe_next_action": "Check the official source for feedback or payout status; record the result.",
-      "source_fingerprint": "6fb2e3e6f464fc03ac36bc7c",
+      "source_fingerprint": "cae384ff387fe6b5cb60025a",
       "source_url": "https://github.com/BasedHardware/omi/issues/14576",
       "status": "submitted"
     },
@@ -27,7 +27,7 @@
       "priority": 100,
       "role": "Verifier",
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "06e98ed04f793b0ca3bbf09a",
+      "source_fingerprint": "e2d7599141d105783bd85044",
       "source_url": "https://github.com/ale-helper-bot/agent-prettier-rs/issues/1",
       "status": "lead"
     },
@@ -38,7 +38,7 @@
       "priority": 100,
       "role": "Verifier",
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "a61325e9b775ebcd0cb47144",
+      "source_fingerprint": "da83444236b286bc5b96de05",
       "source_url": "https://github.com/anatolykoptev/go-job/issues/348",
       "status": "lead"
     },
@@ -49,7 +49,7 @@
       "priority": 100,
       "role": "Verifier",
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "fd63796e10ddbce3f0a911ea",
+      "source_fingerprint": "93ba36d1356b4da11c074967",
       "source_url": "https://github.com/IvanTop082/Proopmpter/issues/1",
       "status": "lead"
     },
@@ -60,7 +60,7 @@
       "priority": 100,
       "role": "Verifier",
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "38a94a1d459d47b41b8b8682",
+      "source_fingerprint": "51b1a59deeeccfea182556bb",
       "source_url": "https://github.com/ValenciaLim/opik-galacticode/issues/1",
       "status": "lead"
     }
