@@ -1,13 +1,13 @@
 {
   "counts": {
-    "queued": 3,
     "accepted_work": 0,
-    "submitted_checks": 0,
-    "verifications": 3,
     "leased": 0,
-    "parked": 2
+    "parked": 2,
+    "queued": 5,
+    "submitted_checks": 0,
+    "verifications": 5
   },
-  "generated_at": "2026-09-21T21:55:00+00:00",
+  "generated_at": "2026-09-21T23:40:37+00:00",
   "jobs": [
     {
       "id": "verify-1808a0c602aa5d9dcdc2",
@@ -40,6 +40,28 @@
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
       "source_fingerprint": "26c857b269cd9e89ef16dce8",
       "source_url": "https://github.com/algora-io/algora/issues/208",
+      "status": "lead"
+    },
+    {
+      "id": "verify-33ed148138b70f539324",
+      "item_id": "33ed148138b70f539324",
+      "kind": "verify",
+      "priority": 100,
+      "role": "Verifier",
+      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
+      "source_fingerprint": "a49511876cb9a07152cc0823",
+      "source_url": "https://github.com/algora-io/algora/issues/210",
+      "status": "lead"
+    },
+    {
+      "id": "verify-3edc98b7d14fcff33d3c",
+      "item_id": "3edc98b7d14fcff33d3c",
+      "kind": "verify",
+      "priority": 100,
+      "role": "Verifier",
+      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
+      "source_fingerprint": "cf4b3d075b997702a6afc94e",
+      "source_url": "https://github.com/humanprotocol/human-protocol/issues/1257",
       "status": "lead"
     }
   ],

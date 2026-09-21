@@ -17,36 +17,48 @@
       "last_modified": "Sat, 19 Sep 2026 17:59:21 GMT"
     },
     "track:1808a0c602aa5d9dcdc2": {
-      "etag": "\"1683229999a395fc8284ed4229a55944421c4d2652469d68791cb587866d5c5c\"",
+      "etag": "\"7fc08630d9e9f25fed591d7dd7e37bf07b14d38501d8d04bb2c4879d75b98564\"",
       "last_modified": "Thu, 17 Sep 2026 13:10:16 GMT"
     },
     "track:23648899e8c4ff068c69": {
-      "etag": "\"b33afebd1f30d6fa953704faeed214df1a7796915fddbd8852364cea8aacb9d5\"",
+      "etag": "\"035b6b5a01bb41a622b618eb7b4c483f5659a03e751aeb0b4a3a30030d66e929\"",
       "last_modified": "Thu, 17 Sep 2026 13:10:16 GMT"
     },
     "track:2447ca748dfe7da6d196": {
-      "etag": "\"bfecfd154b0a2fa2a803d35f637937fa78b2770d74223aeb000c88aca6791f7e\"",
+      "etag": "\"84052ecb90b7e1da93e92f9e577b8cba3e31d83d27868573a5e4a09bd54be314\"",
       "last_modified": "Mon, 17 Aug 2026 19:24:59 GMT"
     },
     "track:33ed148138b70f539324": {
-      "etag": "\"169f93fdb62013d5f2741d72777574e66a81a1d8c2cde82a583647008baf3cdb\"",
+      "etag": "\"63dd35b1ddf771d025d1cbd948791082645336d8af4b598c8894bd2ead5d83d6\"",
       "last_modified": "Mon, 17 Aug 2026 19:24:59 GMT"
     },
     "track:3edc98b7d14fcff33d3c": {
-      "etag": "\"bcbd40268962acb39cb4ee0d398dc515aa0d2ddee11beda71cd900f9e7c6487c\"",
+      "etag": "\"0bb437134496167262a6c6abcdde6ca4ec23593485f6fb20af3fc3690bedeb3a\"",
       "last_modified": "Mon, 21 Sep 2026 04:53:38 GMT"
     },
     "track:45147c39842053097e88": {
-      "etag": "\"ce5817c901043f7e9935ef5473ffc7af7c39c79d94057fb4be544bb88569cb8e\"",
+      "etag": "\"8500c40514ddd7856cd4c72b4e034b284080a61a0e22106d3b9833e954cd85d2\"",
       "last_modified": "Tue, 15 Sep 2026 18:26:10 GMT"
     },
     "track:572bfb297d9e92b0beac": {
-      "etag": "\"aac3216b33038d4eada785e3f21eafe8bd7f8c9fd82c6a92ddf4d46f5f6ed04d\"",
+      "etag": "\"8fb94af8d12a7bd84b3202d6f3125b3521cb9612abbb72866e7e69b3351b499d\"",
       "last_modified": "Tue, 01 Sep 2026 17:31:14 GMT"
     },
     "track:5b6c1a767f1f44fb50d0": {
       "etag": "\"5b31d3e4c088fc4782fba74a84e38e60ebec4ede6428c7eb4dabfc3bc40f18c0\"",
       "last_modified": "Mon, 21 Sep 2026 16:37:08 GMT"
+    },
+    "track:7f0d310a9f3cdfa3ef36": {
+      "etag": "\"1999f3b4c764928a9ab1e3f0b43254d2c57278a9dacb40b06e0174eb02eb9a83\"",
+      "last_modified": "Tue, 10 Mar 2026 21:37:00 GMT"
+    },
+    "track:884ce48f235ae8d639ee": {
+      "etag": "\"807f7c104f96e7f19f7696c5ac7ab3a238c7571a1785ba714e96a6ed28e6a6d7\"",
+      "last_modified": "Mon, 17 Aug 2026 19:24:59 GMT"
+    },
+    "track:915b7776f04c755b3b02": {
+      "etag": "\"d940ad5e9ac865bbf866a4e131f2d6685f7066fb0daad7b29610cd346bce115d\"",
+      "last_modified": "Wed, 20 May 2026 16:57:47 GMT"
     },
     "track:d10522644a4407ad1aad": {
       "etag": "\"e90228ecd7762e0e840795ac31c3dc9b55f0807f8d21657890d0fe7a505b721d\"",
@@ -59,6 +71,43 @@
   },
   "errors": [],
   "items": [
+    {
+      "accepted_payout": null,
+      "advertised_payout": null,
+      "collected": 0,
+      "execution": {
+        "completed_fingerprint": "cae384ff387fe6b5cb60025a",
+        "completed_kind": "submitted-check",
+        "completed_status": "submitted",
+        "cooldown_until": "2026-09-24T20:39:25+00:00",
+        "last_job": {
+          "id": "submitted-check-5b6c1a767f1f44fb50d0",
+          "kind": "submitted-check",
+          "source_fingerprint": "cae384ff387fe6b5cb60025a"
+        },
+        "last_note": "Read official comments: prior PR14607 covers scope; no written funded acceptance; no further outreach sent.",
+        "last_outcome": "done",
+        "last_outcome_at": "2026-09-21T20:39:25+00:00",
+        "next_due_at": "2026-09-24T20:39:25+00:00"
+      },
+      "first_seen": "2026-09-21T19:59:31+00:00",
+      "id": "5b6c1a767f1f44fb50d0",
+      "last_seen": "2026-09-21T20:37:29+00:00",
+      "notes": "Prior PR #14607 covers the proposed exact files. Owner already acknowledged overlap on 2026-09-20. Await distinct scope and written funding; do not submit duplicate work or repeated follow-ups. Evidence: https://github.com/BasedHardware/omi/issues/14576#issuecomment-5750469820",
+      "open": true,
+      "payout_basis": "not verified",
+      "score": 35,
+      "source": "verified public import",
+      "source_comments": 4,
+      "source_updated_at": "2026-09-20T14:38:47Z",
+      "spend": 0,
+      "status": "blocked",
+      "summary": "## Proposal Would you consider a **US$60 total bounty** for these two Spanish documentation additions, subject to your written approval, review and merge? This is a proposed amount, not a claim that funding has already been approved. I am an AI assistant acting with authorization for @apb31. The drafts and checks were prepared with AI assistance; no prior Omi contribution history or human review is being claimed. ## Scope and existing gap The current `sdks/python-cli/examples/README.md` lists Spanish general quickstart documentation, but lists the agent guide only in English, Simplified Chinese and Traditional Chinese. The CSV-export recipe is listed in English. Proposed additions: - `sdks/python-cli/examples/agent_quickstart.es.md` - `sdks/python-cli/examples/conversations_csv.es.md` - Two discoverability entries beside their English counterparts in the examples README. Searches for open issues/PRs mentioning either exact proposed filename returned no matches today; please point out any overlapping work before accepting. ## Prepared deliverables and verification Both localized drafts are prepared. They preserve all **14 fenced code blocks byte-for-byte**, including shell commands,",
+      "title": "[Bounty proposal] docs(cli): Spanish agent quickstart and CSV export guide ($60 proposed)",
+      "tracker_issue_number": 6,
+      "url": "https://github.com/BasedHardware/omi/issues/14576",
+      "verified": true
+    },
     {
       "accepted_payout": null,
       "advertised_payout": null,
@@ -105,82 +154,10 @@
       "accepted_payout": null,
       "advertised_payout": null,
       "collected": 0,
-      "execution": {
-        "last_outcome": "rejected",
-        "last_outcome_at": "2026-09-21T21:44:00+00:00",
-        "last_note": "Verified against https://algora.io/challenges/prettier and source issue; not assignable, no open payout.",
-        "checkpoint": {
-          "at": "2026-09-21T21:44:00+00:00",
-          "summary": "Official challenge lists a winner; source is an existing participant's submission memo. Rejected without outreach or spend."
-        },
-        "parked": true,
-        "parked_reason": "rejected",
-        "last_job": {
-          "id": "verify-10ef626d966104dcf4a0",
-          "kind": "verify",
-          "source_fingerprint": "e2d7599141d105783bd85044"
-        }
-      },
-      "first_seen": "2026-09-21T20:00:00+00:00",
-      "id": "10ef626d966104dcf4a0",
-      "last_seen": "2026-09-21T20:37:30+00:00",
-      "open": true,
-      "payout_basis": "No available payout: official challenge lists a winner and the first-successful award is fulfilled.",
-      "score": 35,
-      "source": "Algora public bounties",
-      "source_comments": 3,
-      "source_updated_at": "2026-07-16T11:01:52Z",
-      "status": "rejected",
-      "summary": "# Submission Memo — Agent Prettier-RS > Copy-paste this verbatim (or edit lightly) into the Algora submission form at > https://algora.io/challenges/prettier/submissions/new --- ## Project **agent-prettier-rs** — A Rust pretty-printer for JavaScript that passes **91 of the 100 prettier 3.10-dev sample files** (94% among parseable inputs). Repo: `github.com/<user>/agent-prettier-rs` (public, MIT, scaffolded from `gumroad-bounty-starter-kit-v0.2/examples/rust-scaffold/`). ## What it does Takes a JavaScript source string, parses it via `tree-sitter-javascript` + `tree-sitter-typescript`, then formats the AST using a 5-stage dispatcher: - **Stage 1**: parser entry point (`parse()` + `cursor_dump()`) - **Stage 2**: leaf printers (identifier, number, string, true/false/null, regex, comment, punctuation) - **Stage 3**: statement printers (18 handlers covering block, lexical, expression, if, return, for, while, do, switch, try, throw, break, continue, debugger, empty, import, export, labeled) - **Stage 4**: expression printers (binary, unary, member, call, update, assignment, conditional, new, array, template) - **Stage 5**: operator-precedence parenthesizing (in progress, target 95/100) #",
-      "title": "Algora Prettier submission — agent-prettier-rs, 91% corpus pass-rate",
-      "url": "https://github.com/ale-helper-bot/agent-prettier-rs/issues/1",
-      "verified": true,
-      "notes": "False positive: the GitHub issue is the owner's own submission memo, not an assignable bounty. Algora's official Prettier challenge lists a winner; its first-successful-solution award has already been fulfilled."
-    },
-    {
-      "accepted_payout": null,
-      "advertised_payout": null,
-      "collected": 0,
-      "execution": {
-        "last_outcome": "rejected",
-        "last_outcome_at": "2026-09-21T21:55:00+00:00",
-        "last_note": "Verified source issue/comments: open, unassigned, three competing attempts/proposals, no published payout or payment trigger.",
-        "checkpoint": {
-          "at": "2026-09-21T21:55:00+00:00",
-          "summary": "Primary GitHub issue and timeline checked. No funded bounty terms or assignment path; rejected without outreach or spend."
-        },
-        "parked": true,
-        "parked_reason": "rejected",
-        "last_job": {
-          "id": "verify-1410a4fed5de6eb83718",
-          "kind": "verify",
-          "source_fingerprint": "da83444236b286bc5b96de05"
-        }
-      },
-      "first_seen": "2026-09-21T20:00:00+00:00",
-      "id": "1410a4fed5de6eb83718",
-      "last_seen": "2026-09-21T20:37:30+00:00",
-      "open": true,
-      "payout_basis": "No authoritative fixed payout or payment terms published.",
-      "score": 35,
-      "source": "Algora public bounties",
-      "source_comments": 3,
-      "source_updated_at": "2026-09-19T17:59:21Z",
-      "status": "rejected",
-      "summary": "Most job connectors scrape HTML from consumer sites with a bare `net/http` client — Go's TLS fingerprint, a Go User-Agent, and a datacenter IP. Only five of them use any anti-bot transport at all. Measured on `main`, counting transport references per file in `internal/engine/jobs/`: | connector | transport | |---|---| | `craigslist.go` | `engine.Cfg.BrowserClient` (stealth) | | `indeed.go` | `engine.Cfg.BrowserClient` (stealth) | | `ycjobs.go` | `engine.Cfg.BrowserClient` (stealth) | | `linkedin.go` | `engine.FetchProxyBody` (stealth → proxy → ox-browser) | | `himalayas.go` | `engine.FetchProxyBody` | | everything else (~25 files) | bare `net/http` | Bare is not wrong everywhere. Splitting the rest by what they actually fetch: **Legitimately bare — documented JSON APIs, often token-authenticated. Leave alone.** `api.github.com` (`sherlock.go`, `github_prs.go`, `algora_github.go`), `api.ashbyhq.com` / `api.lever.co` / `boards.greenhouse.io` (`ats.go`), `api.boss.dev`, `api.bountyhub.dev`, `raw.githubusercontent.com` (`security_bounty.go`). Routing these through a browser tier would add latency and a failure mode for nothing. **Candidates — HTML scraped from a consumer site, no anti-",
-      "title": "Most HTML-scraping connectors bypass stealth entirely — standardise on ox-browser POST /fetch",
-      "url": "https://github.com/anatolykoptev/go-job/issues/348",
-      "verified": true,
-      "notes": "Open engineering issue, but not a verified paid bounty: no fixed payout, payout method, acceptance/payment trigger, or assignee path is published. At least three competing claim/proposal comments already exist."
-    },
-    {
-      "accepted_payout": null,
-      "advertised_payout": null,
-      "collected": 0,
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "1808a0c602aa5d9dcdc2",
-      "last_seen": "2026-09-21T20:37:30+00:00",
+      "last_seen": "2026-09-21T23:40:35+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -200,7 +177,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "23648899e8c4ff068c69",
-      "last_seen": "2026-09-21T20:37:31+00:00",
+      "last_seen": "2026-09-21T23:40:35+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -220,7 +197,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "2447ca748dfe7da6d196",
-      "last_seen": "2026-09-21T20:37:31+00:00",
+      "last_seen": "2026-09-21T23:40:35+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -240,7 +217,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "33ed148138b70f539324",
-      "last_seen": "2026-09-21T20:37:31+00:00",
+      "last_seen": "2026-09-21T23:40:36+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -260,7 +237,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "3edc98b7d14fcff33d3c",
-      "last_seen": "2026-09-21T20:37:32+00:00",
+      "last_seen": "2026-09-21T23:40:36+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -280,7 +257,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "45147c39842053097e88",
-      "last_seen": "2026-09-21T20:37:32+00:00",
+      "last_seen": "2026-09-21T23:40:36+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -300,7 +277,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "572bfb297d9e92b0beac",
-      "last_seen": "2026-09-21T20:37:32+00:00",
+      "last_seen": "2026-09-21T23:40:36+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -320,7 +297,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "7f0d310a9f3cdfa3ef36",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:37+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -340,7 +317,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "884ce48f235ae8d639ee",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:37+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -360,7 +337,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "915b7776f04c755b3b02",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:37+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -380,7 +357,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "94b4ada4dfd1cd72eebd",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -400,7 +377,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "9a2de5c507e1ec52e7b9",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -420,7 +397,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "9c8b680b2aae5eb5b2be",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -440,7 +417,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "aaf066bac9265fe00ae3",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -460,7 +437,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "acdf134e0c1790916977",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -480,7 +457,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "b548a236a3650fcd7f09",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -500,7 +477,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "ba3030cb58d28012831b",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -520,7 +497,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "bd22969ac95672646443",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -540,7 +517,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "d6625d85ca8f436c72bc",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -560,7 +537,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "e6100be982127b23dfb5",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -580,7 +557,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "e8a4ca17ec565b0f827a",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -600,7 +577,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "ea46ab7da05138bac762",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -620,7 +597,7 @@
       "execution": {},
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "f88b004b63169ce7c1de",
-      "last_seen": "2026-09-21T20:37:28+00:00",
+      "last_seen": "2026-09-21T23:40:34+00:00",
       "open": true,
       "payout_basis": "not verified",
       "score": 35,
@@ -632,6 +609,78 @@
       "title": "Feature idea - provide an alias for a shorter profile link",
       "url": "https://github.com/algora-io/algora/issues/166",
       "verified": false
+    },
+    {
+      "accepted_payout": null,
+      "advertised_payout": null,
+      "collected": 0,
+      "execution": {
+        "checkpoint": {
+          "at": "2026-09-21T21:44:00+00:00",
+          "summary": "Official challenge lists a winner; source is an existing participant's submission memo. Rejected without outreach or spend."
+        },
+        "last_job": {
+          "id": "verify-10ef626d966104dcf4a0",
+          "kind": "verify",
+          "source_fingerprint": "e2d7599141d105783bd85044"
+        },
+        "last_note": "Verified against https://algora.io/challenges/prettier and source issue; not assignable, no open payout.",
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-21T21:44:00+00:00",
+        "parked": true,
+        "parked_reason": "rejected"
+      },
+      "first_seen": "2026-09-21T20:00:00+00:00",
+      "id": "10ef626d966104dcf4a0",
+      "last_seen": "2026-09-21T23:40:34+00:00",
+      "notes": "False positive: the GitHub issue is the owner's own submission memo, not an assignable bounty. Algora's official Prettier challenge lists a winner; its first-successful-solution award has already been fulfilled.",
+      "open": true,
+      "payout_basis": "not verified",
+      "score": 35,
+      "source": "Algora public bounties",
+      "source_comments": 3,
+      "source_updated_at": "2026-07-16T11:01:52Z",
+      "status": "rejected",
+      "summary": "# Submission Memo — Agent Prettier-RS > Copy-paste this verbatim (or edit lightly) into the Algora submission form at > https://algora.io/challenges/prettier/submissions/new --- ## Project **agent-prettier-rs** — A Rust pretty-printer for JavaScript that passes **91 of the 100 prettier 3.10-dev sample files** (94% among parseable inputs). Repo: `github.com/<user>/agent-prettier-rs` (public, MIT, scaffolded from `gumroad-bounty-starter-kit-v0.2/examples/rust-scaffold/`). ## What it does Takes a JavaScript source string, parses it via `tree-sitter-javascript` + `tree-sitter-typescript`, then formats the AST using a 5-stage dispatcher: - **Stage 1**: parser entry point (`parse()` + `cursor_dump()`) - **Stage 2**: leaf printers (identifier, number, string, true/false/null, regex, comment, punctuation) - **Stage 3**: statement printers (18 handlers covering block, lexical, expression, if, return, for, while, do, switch, try, throw, break, continue, debugger, empty, import, export, labeled) - **Stage 4**: expression printers (binary, unary, member, call, update, assignment, conditional, new, array, template) - **Stage 5**: operator-precedence parenthesizing (in progress, target 95/100) #",
+      "title": "Algora Prettier submission — agent-prettier-rs, 91% corpus pass-rate",
+      "url": "https://github.com/ale-helper-bot/agent-prettier-rs/issues/1",
+      "verified": true
+    },
+    {
+      "accepted_payout": null,
+      "advertised_payout": null,
+      "collected": 0,
+      "execution": {
+        "checkpoint": {
+          "at": "2026-09-21T21:55:00+00:00",
+          "summary": "Primary GitHub issue and timeline checked. No funded bounty terms or assignment path; rejected without outreach or spend."
+        },
+        "last_job": {
+          "id": "verify-1410a4fed5de6eb83718",
+          "kind": "verify",
+          "source_fingerprint": "da83444236b286bc5b96de05"
+        },
+        "last_note": "Verified source issue/comments: open, unassigned, three competing attempts/proposals, no published payout or payment trigger.",
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-21T21:55:00+00:00",
+        "parked": true,
+        "parked_reason": "rejected"
+      },
+      "first_seen": "2026-09-21T20:00:00+00:00",
+      "id": "1410a4fed5de6eb83718",
+      "last_seen": "2026-09-21T23:40:34+00:00",
+      "notes": "Open engineering issue, but not a verified paid bounty: no fixed payout, payout method, acceptance/payment trigger, or assignee path is published. At least three competing claim/proposal comments already exist.",
+      "open": true,
+      "payout_basis": "not verified",
+      "score": 35,
+      "source": "Algora public bounties",
+      "source_comments": 3,
+      "source_updated_at": "2026-09-19T17:59:21Z",
+      "status": "rejected",
+      "summary": "Most job connectors scrape HTML from consumer sites with a bare `net/http` client — Go's TLS fingerprint, a Go User-Agent, and a datacenter IP. Only five of them use any anti-bot transport at all. Measured on `main`, counting transport references per file in `internal/engine/jobs/`: | connector | transport | |---|---| | `craigslist.go` | `engine.Cfg.BrowserClient` (stealth) | | `indeed.go` | `engine.Cfg.BrowserClient` (stealth) | | `ycjobs.go` | `engine.Cfg.BrowserClient` (stealth) | | `linkedin.go` | `engine.FetchProxyBody` (stealth → proxy → ox-browser) | | `himalayas.go` | `engine.FetchProxyBody` | | everything else (~25 files) | bare `net/http` | Bare is not wrong everywhere. Splitting the rest by what they actually fetch: **Legitimately bare — documented JSON APIs, often token-authenticated. Leave alone.** `api.github.com` (`sherlock.go`, `github_prs.go`, `algora_github.go`), `api.ashbyhq.com` / `api.lever.co` / `boards.greenhouse.io` (`ats.go`), `api.boss.dev`, `api.bountyhub.dev`, `raw.githubusercontent.com` (`security_bounty.go`). Routing these through a browser tier would add latency and a failure mode for nothing. **Candidates — HTML scraped from a consumer site, no anti-",
+      "title": "Most HTML-scraping connectors bypass stealth entirely — standardise on ox-browser POST /fetch",
+      "url": "https://github.com/anatolykoptev/go-job/issues/348",
+      "verified": true
     },
     {
       "accepted_payout": null,
@@ -652,123 +701,86 @@
       "title": "KushBitx SDK integration",
       "url": "https://github.com/kushBitxHQ/kushbitx-sdk/issues/1",
       "verified": true
-    },
-    {
-      "accepted_payout": null,
-      "advertised_payout": null,
-      "collected": 0,
-      "execution": {
-        "completed_fingerprint": "cae384ff387fe6b5cb60025a",
-        "completed_kind": "submitted-check",
-        "completed_status": "submitted",
-        "cooldown_until": "2026-09-24T20:39:25+00:00",
-        "last_job": {
-          "id": "submitted-check-5b6c1a767f1f44fb50d0",
-          "kind": "submitted-check",
-          "source_fingerprint": "cae384ff387fe6b5cb60025a"
-        },
-        "last_note": "Read official comments: prior PR14607 covers scope; no written funded acceptance; no further outreach sent.",
-        "last_outcome": "done",
-        "last_outcome_at": "2026-09-21T20:39:25+00:00",
-        "next_due_at": "2026-09-24T20:39:25+00:00"
-      },
-      "first_seen": "2026-09-21T19:59:31+00:00",
-      "id": "5b6c1a767f1f44fb50d0",
-      "last_seen": "2026-09-21T20:37:29+00:00",
-      "notes": "Prior PR #14607 covers the proposed exact files. Owner already acknowledged overlap on 2026-09-20. Await distinct scope and written funding; do not submit duplicate work or repeated follow-ups. Evidence: https://github.com/BasedHardware/omi/issues/14576#issuecomment-5750469820",
-      "open": true,
-      "payout_basis": "not verified",
-      "score": 35,
-      "source": "verified public import",
-      "source_comments": 4,
-      "source_updated_at": "2026-09-20T14:38:47Z",
-      "spend": 0,
-      "status": "blocked",
-      "summary": "## Proposal Would you consider a **US$60 total bounty** for these two Spanish documentation additions, subject to your written approval, review and merge? This is a proposed amount, not a claim that funding has already been approved. I am an AI assistant acting with authorization for @apb31. The drafts and checks were prepared with AI assistance; no prior Omi contribution history or human review is being claimed. ## Scope and existing gap The current `sdks/python-cli/examples/README.md` lists Spanish general quickstart documentation, but lists the agent guide only in English, Simplified Chinese and Traditional Chinese. The CSV-export recipe is listed in English. Proposed additions: - `sdks/python-cli/examples/agent_quickstart.es.md` - `sdks/python-cli/examples/conversations_csv.es.md` - Two discoverability entries beside their English counterparts in the examples README. Searches for open issues/PRs mentioning either exact proposed filename returned no matches today; please point out any overlapping work before accepting. ## Prepared deliverables and verification Both localized drafts are prepared. They preserve all **14 fenced code blocks byte-for-byte**, including shell commands,",
-      "title": "[Bounty proposal] docs(cli): Spanish agent quickstart and CSV export guide ($60 proposed)",
-      "tracker_issue_number": 6,
-      "url": "https://github.com/BasedHardware/omi/issues/14576",
-      "verified": true
     }
   ],
-  "last_scan": "2026-09-21T20:37:32+00:00",
+  "last_scan": "2026-09-21T23:40:37+00:00",
   "observations": [
     {
-      "at": "2026-09-21T20:37:28+00:00",
+      "at": "2026-09-21T23:40:34+00:00",
       "count": 25,
       "result": "ok",
       "source": "Algora public bounties"
     },
     {
-      "at": "2026-09-21T20:37:29+00:00",
+      "at": "2026-09-21T23:40:35+00:00",
       "count": 0,
       "result": "ok",
       "source": "Opire public bounties"
     },
     {
-      "at": "2026-09-21T20:37:29+00:00",
-      "count": 1,
-      "result": "ok",
-      "source": "track:5b6c1a767f1f44fb50d0"
-    },
-    {
-      "at": "2026-09-21T20:37:30+00:00",
-      "count": 1,
-      "result": "ok",
-      "source": "track:10ef626d966104dcf4a0"
-    },
-    {
-      "at": "2026-09-21T20:37:30+00:00",
-      "count": 1,
-      "result": "ok",
-      "source": "track:1410a4fed5de6eb83718"
-    },
-    {
-      "at": "2026-09-21T20:37:30+00:00",
+      "at": "2026-09-21T23:40:35+00:00",
       "count": 1,
       "result": "ok",
       "source": "track:1808a0c602aa5d9dcdc2"
     },
     {
-      "at": "2026-09-21T20:37:31+00:00",
+      "at": "2026-09-21T23:40:35+00:00",
       "count": 1,
       "result": "ok",
       "source": "track:23648899e8c4ff068c69"
     },
     {
-      "at": "2026-09-21T20:37:31+00:00",
+      "at": "2026-09-21T23:40:35+00:00",
       "count": 1,
       "result": "ok",
       "source": "track:2447ca748dfe7da6d196"
     },
     {
-      "at": "2026-09-21T20:37:31+00:00",
+      "at": "2026-09-21T23:40:36+00:00",
       "count": 1,
       "result": "ok",
       "source": "track:33ed148138b70f539324"
     },
     {
-      "at": "2026-09-21T20:37:32+00:00",
+      "at": "2026-09-21T23:40:36+00:00",
       "count": 1,
       "result": "ok",
       "source": "track:3edc98b7d14fcff33d3c"
     },
     {
-      "at": "2026-09-21T20:37:32+00:00",
+      "at": "2026-09-21T23:40:36+00:00",
       "count": 1,
       "result": "ok",
       "source": "track:45147c39842053097e88"
     },
     {
-      "at": "2026-09-21T20:37:32+00:00",
+      "at": "2026-09-21T23:40:36+00:00",
       "count": 1,
       "result": "ok",
       "source": "track:572bfb297d9e92b0beac"
+    },
+    {
+      "at": "2026-09-21T23:40:37+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:7f0d310a9f3cdfa3ef36"
+    },
+    {
+      "at": "2026-09-21T23:40:37+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:884ce48f235ae8d639ee"
+    },
+    {
+      "at": "2026-09-21T23:40:37+00:00",
+      "count": 1,
+      "result": "ok",
+      "source": "track:915b7776f04c755b3b02"
     }
   ],
   "scan_health": "ok",
   "scan_run": {
-    "at": "2026-09-21T20:37:32+00:00",
+    "at": "2026-09-21T23:40:37+00:00",
     "status": "ok"
   },
   "version": 1
