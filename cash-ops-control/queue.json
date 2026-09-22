@@ -1,13 +1,13 @@
 {
   "counts": {
-    "accepted_work": 0,
-    "leased": 1,
-    "parked": 33,
     "queued": 4,
+    "accepted_work": 0,
     "submitted_checks": 0,
-    "verifications": 4
+    "verifications": 4,
+    "leased": 0,
+    "parked": 33
   },
-  "generated_at": "2026-09-22T17:53:50+00:00",
+  "generated_at": "2026-09-22T18:01:00+00:00",
   "jobs": [
     {
       "id": "verify-0f6bfd099d3dc585046b",

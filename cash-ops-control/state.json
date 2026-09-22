@@ -1213,20 +1213,23 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
-        "cooldown_until": "2026-09-22T14:08:38+00:00",
-        "current_job": {
+        "cooldown_until": "2026-09-25T18:01:00+00:00",
+        "last_note": "Official listing remains active; Gmail thread had no buyer reply. Sent one due in-thread follow-up after 72h and verified SENT receipt 1a0ca44b60b1e83a.",
+        "last_outcome": "done",
+        "next_due_at": "2026-09-25T18:01:00+00:00",
+        "last_outcome_at": "2026-09-22T18:01:00+00:00",
+        "checkpoint": {
+          "at": "2026-09-22T18:01:00+00:00",
+          "summary": "Reconciled original application and active listing; one brief follow-up sent and verified. Await buyer reply; no further outreach before 2026-09-25T18:01:00Z."
+        },
+        "completed_fingerprint": "d7378c69df17a8ffcf88afd7",
+        "completed_kind": "submitted-check",
+        "completed_status": "submitted",
+        "last_job": {
           "id": "submitted-check-33e39857abc92ce6b9a1",
           "kind": "submitted-check",
           "source_fingerprint": "d7378c69df17a8ffcf88afd7"
-        },
-        "last_note": "Await buyer response; enforce private sent-mail deduplication before any follow-up.",
-        "last_outcome": "checkpoint",
-        "lease": {
-          "claimed_at": "2026-09-22T17:50:10+00:00",
-          "expires_at": "2026-09-22T18:50:10+00:00",
-          "owner": "hourly-executor"
-        },
-        "next_due_at": "2026-09-22T14:08:38+00:00"
+        }
       },
       "first_seen": "2026-09-22T03:05:39+00:00",
       "id": "33e39857abc92ce6b9a1",

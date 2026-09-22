@@ -1,11 +1,11 @@
 # Cash Ops Control
 
-Updated: 2026-09-22T17:53:50+00:00  
+Updated: 2026-09-22T18:01:00+00:00  
 Scan health: **ok**
 
 ## Execution queue
 
-Queued: **4/5** · Leased: **1** · Parked: **33**  
+Queued: **4/5** · Leased: **0** · Parked: **33**  
 Accepted/application: **0** · Submitted checks: **0** · Verifications: **4**  
 Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/looking-for-n8n-make-automation-specialist-for-ongoing-fixed-price-projects/315672]
 
