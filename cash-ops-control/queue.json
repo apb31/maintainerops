@@ -1,25 +1,14 @@
 {
   "counts": {
     "accepted_work": 0,
-    "leased": 0,
+    "leased": 1,
     "parked": 30,
-    "queued": 3,
+    "queued": 2,
     "submitted_checks": 0,
-    "verifications": 3
+    "verifications": 2
   },
-  "generated_at": "2026-09-22T03:09:11+00:00",
+  "generated_at": "2026-09-22T04:08:28+00:00",
   "jobs": [
-    {
-      "id": "verify-acdf134e0c1790916977",
-      "item_id": "acdf134e0c1790916977",
-      "kind": "verify",
-      "priority": 100,
-      "role": "Verifier",
-      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "c2a88bdf11a2bbb086d0c660",
-      "source_url": "https://github.com/copperheadhq/copperhead/issues/233",
-      "status": "lead"
-    },
     {
       "id": "verify-c295993d0a76ee42fdc5",
       "item_id": "c295993d0a76ee42fdc5",

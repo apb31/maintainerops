@@ -197,7 +197,18 @@
       "accepted_payout": null,
       "advertised_payout": null,
       "collected": 0,
-      "execution": {},
+      "execution": {
+        "lease": {
+          "owner": "hourly-executor",
+          "claimed_at": "2026-09-22T04:08:28+00:00",
+          "expires_at": "2026-09-22T05:08:28+00:00"
+        },
+        "current_job": {
+          "id": "verify-acdf134e0c1790916977",
+          "kind": "verify",
+          "source_fingerprint": "c2a88bdf11a2bbb086d0c660"
+        }
+      },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "acdf134e0c1790916977",
       "last_seen": "2026-09-22T03:09:11+00:00",
