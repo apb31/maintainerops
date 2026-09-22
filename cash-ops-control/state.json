@@ -197,83 +197,10 @@
       "accepted_payout": null,
       "advertised_payout": null,
       "collected": 0,
-      "execution": {
-        "last_outcome": "rejected",
-        "last_outcome_at": "2026-09-22T04:12:00+00:00",
-        "last_note": "Already implemented in #224; no fixed payout or assignable funded scope. No outreach, claim, code, or spend.",
-        "checkpoint": {
-          "at": "2026-09-22T04:12:00+00:00",
-          "summary": "Official issue and comments checked. Existing implementation predates queue entry; rejected as stale/unfunded false positive."
-        },
-        "parked": true,
-        "parked_reason": "rejected",
-        "last_job": {
-          "id": "verify-acdf134e0c1790916977",
-          "kind": "verify",
-          "source_fingerprint": "c2a88bdf11a2bbb086d0c660"
-        }
-      },
-      "first_seen": "2026-09-21T20:00:00+00:00",
-      "id": "acdf134e0c1790916977",
-      "last_seen": "2026-09-22T03:09:11+00:00",
-      "open": true,
-      "payout_basis": "not verified",
-      "score": 35,
-      "source": "Algora public bounties",
-      "source_comments": 2,
-      "source_updated_at": "2026-08-18T17:13:05Z",
-      "status": "rejected",
-      "summary": "## What happened After #224 (frame fit, text collisions, compaction), page size across the corpus floors at roughly 2.5x to 4x the human's total sheet area, with utilization above the 50% floor on most boards. The excess is no longer packing: it is the drawing idiom for stacked passives. Every capacitor in a decoupling bank draws as an isolated island: its own rail symbol above, its own GND symbol below, no wiring to its neighbours. stickhub's shared VBUS bank is 16 caps that the designer drew hanging off ONE +5V trunk and ONE GND trunk, two power symbols total, with junction dots doing the counting. The engine emits 26 power symbols for the same bank and joins nothing. cm5_minima's top row is 28 such islands; jetson's banks are bigger. Each island is several times the drawn footprint of the human's wired equivalent, which is exactly the residual 2.5x to 4x. Page-size comparison at #224's head (engine sheet over the human's total sheet area): interf_u 1.0x, ecc83 1.0x, royalblue 1.3x, cm5_minima 2.5x, tiny_tapeout 2.7x, openair-max 2.7x, kit-dev-coldfire 3.2x, stickhub 4.0x, complex_hierarchy 4.0x, multichannel 4.0x, pic_programmer 4.0x, sonde xilinx 4.0x. ## The fix: rail-bank tru",
-      "title": "Stacked passives draw as isolated islands: a 16-cap bank carries 26 power symbols where the human used 2",
-      "url": "https://github.com/copperheadhq/copperhead/issues/233",
-      "verified": true,
-      "notes": "Verified from the official issue and comments: the requested rail-bank work was already implemented in PR #224 / commit ce72222 before this lead was queued. The issue records no fixed bounty, assignment rule, payout method, or payment trigger; a later /attempt comment does not create funding."
-    },
-    {
-      "accepted_payout": null,
-      "advertised_payout": null,
-      "collected": 0,
-      "execution": {
-        "last_outcome": "rejected",
-        "last_outcome_at": "2026-09-22T07:31:00+00:00",
-        "last_note": "Genuine buyer request, but no fixed scope or payout terms and heavy competition; no assignable paid task yet. No outreach or spend.",
-        "checkpoint": {
-          "at": "2026-09-22T07:31:00+00:00",
-          "summary": "Original buyer post and public replies reviewed. Rejected for this queue cycle: missing scope/payment terms and no assignment despite 19 public pitches."
-        },
-        "parked": true,
-        "parked_reason": "rejected",
-        "last_job": {
-          "id": "verify-c295993d0a76ee42fdc5",
-          "kind": "verify",
-          "source_fingerprint": "4ea8c1e3bdb76d529c9b2ad1"
-        }
-      },
-      "first_seen": "2026-09-22T03:05:31+00:00",
-      "id": "c295993d0a76ee42fdc5",
-      "last_seen": "2026-09-22T03:09:10+00:00",
-      "open": true,
-      "payout_basis": "not verified",
-      "published_at": "2026-09-18T03:52:45+00:00",
-      "score": 35,
-      "source": "Make Community Hire Help buyers",
-      "source_comments": null,
-      "source_updated_at": null,
-      "status": "rejected",
-      "summary": "<p>I’ve been playing around Make for i’m working on, but I’m afraid I’m stuck. I’m happy to pay for help at this point. It’s a simple workflow but I only started using Make a few days ago, so it all looks like gibberish to me.</p> <p>I’d be happy to discuss the workflow in more d",
-      "title": "Make freelancer needed for project",
-      "url": "https://community.make.com/t/make-freelancer-needed-for-project/115431",
-      "verified": true,
-      "notes": "Verified from the original Make Community buyer post and complete public thread. The buyer expressed willingness to pay but published no workflow scope, budget, deadline, acceptance test, payment method, or payment trigger. At least 19 public pitches followed and the buyer posted no public clarification or assignment. No outreach sent."
-    },
-    {
-      "accepted_payout": null,
-      "advertised_payout": null,
-      "collected": 0,
       "execution": {},
       "first_seen": "2026-09-22T03:05:31+00:00",
       "id": "f634b8100222264c1dfb",
-      "last_seen": "2026-09-22T03:09:10+00:00",
+      "last_seen": "2026-09-22T07:38:22+00:00",
       "open": true,
       "payout_basis": "not verified",
       "published_at": "2026-09-14T06:34:45+00:00",
@@ -336,7 +263,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "10ef626d966104dcf4a0",
-      "last_seen": "2026-09-22T03:09:08+00:00",
+      "last_seen": "2026-09-22T07:38:21+00:00",
       "notes": "False positive: the GitHub issue is the owner's own submission memo, not an assignable bounty. Algora's official Prettier challenge lists a winner; its first-successful-solution award has already been fulfilled.",
       "open": true,
       "payout_basis": "not verified",
@@ -372,7 +299,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "1410a4fed5de6eb83718",
-      "last_seen": "2026-09-22T03:09:08+00:00",
+      "last_seen": "2026-09-22T07:38:21+00:00",
       "notes": "Open engineering issue, but not a verified paid bounty: no fixed payout, payout method, acceptance/payment trigger, or assignee path is published. At least three competing claim/proposal comments already exist.",
       "open": true,
       "payout_basis": "not verified",
@@ -561,7 +488,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "3edc98b7d14fcff33d3c",
-      "last_seen": "2026-09-22T03:09:08+00:00",
+      "last_seen": "2026-09-22T07:38:21+00:00",
       "notes": "2023 suggestion of bounty platforms, not an offered paid task. Primary issue read 2026-09-22.",
       "open": true,
       "payout_basis": "not verified",
@@ -615,7 +542,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "45147c39842053097e88",
-      "last_seen": "2026-09-22T03:09:08+00:00",
+      "last_seen": "2026-09-22T07:38:21+00:00",
       "notes": "Unfunded $3 USDC-on-merge promise with multiple prior attempts, no maintainer assignment or payment proof; required API not verified. Source issue/comments/AGENTS/README checked 2026-09-22.",
       "open": true,
       "payout_basis": "not verified",
@@ -696,7 +623,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "7f0d310a9f3cdfa3ef36",
-      "last_seen": "2026-09-22T03:09:08+00:00",
+      "last_seen": "2026-09-22T07:38:21+00:00",
       "notes": "Discussion listing bounty-platform alternatives; not an available paid assignment.",
       "open": true,
       "payout_basis": "not verified",
@@ -797,7 +724,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "94b4ada4dfd1cd72eebd",
-      "last_seen": "2026-09-22T03:09:08+00:00",
+      "last_seen": "2026-09-22T07:38:21+00:00",
       "notes": "Platform feature implementation description; no published paid reward or assignment.",
       "open": true,
       "payout_basis": "not verified",
@@ -851,7 +778,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "9c8b680b2aae5eb5b2be",
-      "last_seen": "2026-09-22T03:09:08+00:00",
+      "last_seen": "2026-09-22T07:38:21+00:00",
       "notes": "Platform integration feature request; no published paid reward or assignment.",
       "open": true,
       "payout_basis": "not verified",
@@ -891,6 +818,42 @@
       "title": "Bug: Incorrect Profile data",
       "url": "https://github.com/algora-io/algora/issues/168",
       "verified": false
+    },
+    {
+      "accepted_payout": null,
+      "advertised_payout": null,
+      "collected": 0,
+      "execution": {
+        "checkpoint": {
+          "at": "2026-09-22T04:12:00+00:00",
+          "summary": "Official issue and comments checked. Existing implementation predates queue entry; rejected as stale/unfunded false positive."
+        },
+        "last_job": {
+          "id": "verify-acdf134e0c1790916977",
+          "kind": "verify",
+          "source_fingerprint": "c2a88bdf11a2bbb086d0c660"
+        },
+        "last_note": "Already implemented in #224; no fixed payout or assignable funded scope. No outreach, claim, code, or spend.",
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-22T04:12:00+00:00",
+        "parked": true,
+        "parked_reason": "rejected"
+      },
+      "first_seen": "2026-09-21T20:00:00+00:00",
+      "id": "acdf134e0c1790916977",
+      "last_seen": "2026-09-22T03:09:11+00:00",
+      "notes": "Verified from the official issue and comments: the requested rail-bank work was already implemented in PR #224 / commit ce72222 before this lead was queued. The issue records no fixed bounty, assignment rule, payout method, or payment trigger; a later /attempt comment does not create funding.",
+      "open": true,
+      "payout_basis": "not verified",
+      "score": 35,
+      "source": "Algora public bounties",
+      "source_comments": 2,
+      "source_updated_at": "2026-08-18T17:13:05Z",
+      "status": "rejected",
+      "summary": "## What happened After #224 (frame fit, text collisions, compaction), page size across the corpus floors at roughly 2.5x to 4x the human's total sheet area, with utilization above the 50% floor on most boards. The excess is no longer packing: it is the drawing idiom for stacked passives. Every capacitor in a decoupling bank draws as an isolated island: its own rail symbol above, its own GND symbol below, no wiring to its neighbours. stickhub's shared VBUS bank is 16 caps that the designer drew hanging off ONE +5V trunk and ONE GND trunk, two power symbols total, with junction dots doing the counting. The engine emits 26 power symbols for the same bank and joins nothing. cm5_minima's top row is 28 such islands; jetson's banks are bigger. Each island is several times the drawn footprint of the human's wired equivalent, which is exactly the residual 2.5x to 4x. Page-size comparison at #224's head (engine sheet over the human's total sheet area): interf_u 1.0x, ecc83 1.0x, royalblue 1.3x, cm5_minima 2.5x, tiny_tapeout 2.7x, openair-max 2.7x, kit-dev-coldfire 3.2x, stickhub 4.0x, complex_hierarchy 4.0x, multichannel 4.0x, pic_programmer 4.0x, sonde xilinx 4.0x. ## The fix: rail-bank tru",
+      "title": "Stacked passives draw as isolated islands: a 16-cap bank carries 26 power symbols where the human used 2",
+      "url": "https://github.com/copperheadhq/copperhead/issues/233",
+      "verified": true
     },
     {
       "accepted_payout": null,
@@ -978,6 +941,43 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
+        "checkpoint": {
+          "at": "2026-09-22T07:31:00+00:00",
+          "summary": "Original buyer post and public replies reviewed. Rejected for this queue cycle: missing scope/payment terms and no assignment despite 19 public pitches."
+        },
+        "last_job": {
+          "id": "verify-c295993d0a76ee42fdc5",
+          "kind": "verify",
+          "source_fingerprint": "4ea8c1e3bdb76d529c9b2ad1"
+        },
+        "last_note": "Genuine buyer request, but no fixed scope or payout terms and heavy competition; no assignable paid task yet. No outreach or spend.",
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-22T07:31:00+00:00",
+        "parked": true,
+        "parked_reason": "rejected"
+      },
+      "first_seen": "2026-09-22T03:05:31+00:00",
+      "id": "c295993d0a76ee42fdc5",
+      "last_seen": "2026-09-22T07:38:22+00:00",
+      "notes": "Verified from the original Make Community buyer post and complete public thread. The buyer expressed willingness to pay but published no workflow scope, budget, deadline, acceptance test, payment method, or payment trigger. At least 19 public pitches followed and the buyer posted no public clarification or assignment. No outreach sent.",
+      "open": true,
+      "payout_basis": "not verified",
+      "published_at": "2026-09-18T03:52:45+00:00",
+      "score": 35,
+      "source": "Make Community Hire Help buyers",
+      "source_comments": null,
+      "source_updated_at": null,
+      "status": "rejected",
+      "summary": "<p>I’ve been playing around Make for i’m working on, but I’m afraid I’m stuck. I’m happy to pay for help at this point. It’s a simple workflow but I only started using Make a few days ago, so it all looks like gibberish to me.</p> <p>I’d be happy to discuss the workflow in more d",
+      "title": "Make freelancer needed for project",
+      "url": "https://community.make.com/t/make-freelancer-needed-for-project/115431",
+      "verified": true
+    },
+    {
+      "accepted_payout": null,
+      "advertised_payout": null,
+      "collected": 0,
+      "execution": {
         "last_note": "Personal website link request; no paid reward or assignment.",
         "last_outcome": "verification-failed",
         "last_outcome_at": "2026-09-22T03:04:55.280970+00:00",
@@ -1013,7 +1013,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "e6100be982127b23dfb5",
-      "last_seen": "2026-09-22T03:09:08+00:00",
+      "last_seen": "2026-09-22T07:38:21+00:00",
       "notes": "Directory listing metadata for Algora; no paid assignment.",
       "open": true,
       "payout_basis": "not verified",
@@ -1137,47 +1137,41 @@
       "verified": false
     }
   ],
-  "last_scan": "2026-09-22T03:09:11+00:00",
+  "last_scan": "2026-09-22T07:38:22+00:00",
   "observations": [
     {
-      "at": "2026-09-22T03:09:08+00:00",
+      "at": "2026-09-22T07:38:21+00:00",
       "count": 8,
       "result": "ok",
       "source": "Algora public bounties"
     },
     {
-      "at": "2026-09-22T03:09:08+00:00",
+      "at": "2026-09-22T07:38:21+00:00",
       "count": 0,
       "result": "ok",
       "source": "Opire public bounties"
     },
     {
-      "at": "2026-09-22T03:09:09+00:00",
+      "at": "2026-09-22T07:38:22+00:00",
       "count": 0,
       "result": "ok",
       "source": "n8n Community Jobs buyers"
     },
     {
-      "at": "2026-09-22T03:09:10+00:00",
+      "at": "2026-09-22T07:38:22+00:00",
       "count": 2,
       "result": "ok",
       "source": "Make Community Hire Help buyers"
     },
     {
-      "at": "2026-09-22T03:09:10+00:00",
+      "at": "2026-09-22T07:38:22+00:00",
       "result": "not modified",
       "source": "WordPress Jobs recent listings"
-    },
-    {
-      "at": "2026-09-22T03:09:11+00:00",
-      "count": 1,
-      "result": "ok",
-      "source": "track:acdf134e0c1790916977"
     }
   ],
   "scan_health": "ok",
   "scan_run": {
-    "at": "2026-09-22T03:09:11+00:00",
+    "at": "2026-09-22T07:38:22+00:00",
     "status": "ok"
   },
   "version": 1
