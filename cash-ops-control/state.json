@@ -197,47 +197,10 @@
       "accepted_payout": null,
       "advertised_payout": null,
       "collected": 0,
-      "execution": {
-        "last_outcome": "rejected",
-        "last_outcome_at": "2026-09-22T19:31:00+00:00",
-        "last_note": "Original post and public replies reviewed; contingent downstream payment, no concrete scope/fixed price/payout rail, and 11 competing proposals. No outreach or spend.",
-        "parked": true,
-        "parked_reason": "rejected",
-        "last_job": {
-          "id": "verify-0f6bfd099d3dc585046b",
-          "kind": "verify",
-          "source_fingerprint": "dda2eedb33369aa85927706e"
-        },
-        "checkpoint": {
-          "at": "2026-09-22T19:31:00+00:00",
-          "summary": "Rejected after primary-source verification; terms are contingent and incomplete, with 11 public competitors. No application or spend."
-        }
-      },
-      "first_seen": "2026-09-22T17:21:07+00:00",
-      "id": "0f6bfd099d3dc585046b",
-      "last_seen": "2026-09-22T18:00:41+00:00",
-      "open": true,
-      "payout_basis": "not verified",
-      "published_at": "2026-09-22T16:54:24+00:00",
-      "score": 35,
-      "source": "n8n Community Jobs buyers",
-      "source_comments": 11,
-      "source_updated_at": null,
-      "status": "rejected",
-      "summary": "<p>Hi,</p> <p>I’m building a small automation service and I’m looking for reliable n8n / Make specialists for ongoing project-based work.</p> <p>I’m looking for people who can work on clearly defined fixed-price projects with agreed deadlines.</p> <p>Typical work may include: • n",
-      "title": "Looking for n8n / Make Automation Specialist for Ongoing Fixed-Price Projects",
-      "url": "https://community.n8n.io/t/looking-for-n8n-make-automation-specialist-for-ongoing-fixed-price-projects/315672",
-      "verified": false,
-      "notes": "Verified from the original n8n Community buyer post and public thread on 2026-09-22. No concrete project, fixed amount, payout rail, or independent payment guarantee; payment is contingent on the buyer's end client approving a milestone and releasing funds. Eleven public proposals already exist. No outreach or spend."
-    },
-    {
-      "accepted_payout": null,
-      "advertised_payout": null,
-      "collected": 0,
       "execution": {},
       "first_seen": "2026-09-22T17:21:07+00:00",
       "id": "2582181d17912e8129f1",
-      "last_seen": "2026-09-22T18:00:41+00:00",
+      "last_seen": "2026-09-22T20:15:07+00:00",
       "open": true,
       "payout_basis": "not verified",
       "published_at": "2026-09-22T07:28:54+00:00",
@@ -258,7 +221,7 @@
       "execution": {},
       "first_seen": "2026-09-22T17:21:07+00:00",
       "id": "6d81b4b8c63ee62fecd9",
-      "last_seen": "2026-09-22T18:00:41+00:00",
+      "last_seen": "2026-09-22T20:15:07+00:00",
       "open": true,
       "payout_basis": "not verified",
       "published_at": "2026-09-22T16:52:06+00:00",
@@ -279,7 +242,7 @@
       "execution": {},
       "first_seen": "2026-09-22T17:53:49+00:00",
       "id": "8ca9a1560de5dd932f33",
-      "last_seen": "2026-09-22T18:00:42+00:00",
+      "last_seen": "2026-09-22T20:15:07+00:00",
       "open": true,
       "payout_basis": "not verified",
       "published_at": "2026-09-22T17:33:17+00:00",
@@ -288,7 +251,7 @@
       "source_comments": null,
       "source_updated_at": null,
       "status": "lead",
-      "summary": "<p>Looking for help in automating a work process involving Katana MRP and QBO. The basic scenario is built but not working at the moment.</p> <p><small>3 posts - 3 participants</small></p> <p><a href=\"https://community.make.com/t/need-help-using-make-to-float-information-from-kat",
+      "summary": "<p>Looking for help in automating a work process involving Katana MRP and QBO. The basic scenario is built but not working at the moment.</p> <p><small>4 posts - 4 participants</small></p> <p><a href=\"https://community.make.com/t/need-help-using-make-to-float-information-from-kat",
       "title": "Need help using Make to float information from Katana into QBO",
       "url": "https://community.make.com/t/need-help-using-make-to-float-information-from-katana-into-qbo/115721",
       "verified": false
@@ -326,6 +289,43 @@
       "collected": 0,
       "execution": {
         "checkpoint": {
+          "at": "2026-09-22T19:31:00+00:00",
+          "summary": "Rejected after primary-source verification; terms are contingent and incomplete, with 11 public competitors. No application or spend."
+        },
+        "last_job": {
+          "id": "verify-0f6bfd099d3dc585046b",
+          "kind": "verify",
+          "source_fingerprint": "dda2eedb33369aa85927706e"
+        },
+        "last_note": "Original post and public replies reviewed; contingent downstream payment, no concrete scope/fixed price/payout rail, and 11 competing proposals. No outreach or spend.",
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-22T19:31:00+00:00",
+        "parked": true,
+        "parked_reason": "rejected"
+      },
+      "first_seen": "2026-09-22T17:21:07+00:00",
+      "id": "0f6bfd099d3dc585046b",
+      "last_seen": "2026-09-22T20:15:07+00:00",
+      "notes": "Verified from the original n8n Community buyer post and public thread on 2026-09-22. No concrete project, fixed amount, payout rail, or independent payment guarantee; payment is contingent on the buyer's end client approving a milestone and releasing funds. Eleven public proposals already exist. No outreach or spend.",
+      "open": true,
+      "payout_basis": "not verified",
+      "published_at": "2026-09-22T16:54:24+00:00",
+      "score": 35,
+      "source": "n8n Community Jobs buyers",
+      "source_comments": null,
+      "source_updated_at": null,
+      "status": "rejected",
+      "summary": "<p>Hi,</p> <p>I’m building a small automation service and I’m looking for reliable n8n / Make specialists for ongoing project-based work.</p> <p>I’m looking for people who can work on clearly defined fixed-price projects with agreed deadlines.</p> <p>Typical work may include: • n",
+      "title": "Looking for n8n / Make Automation Specialist for Ongoing Fixed-Price Projects",
+      "url": "https://community.n8n.io/t/looking-for-n8n-make-automation-specialist-for-ongoing-fixed-price-projects/315672",
+      "verified": false
+    },
+    {
+      "accepted_payout": null,
+      "advertised_payout": null,
+      "collected": 0,
+      "execution": {
+        "checkpoint": {
           "at": "2026-09-21T21:44:00+00:00",
           "summary": "Official challenge lists a winner; source is an existing participant's submission memo. Rejected without outreach or spend."
         },
@@ -342,7 +342,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "10ef626d966104dcf4a0",
-      "last_seen": "2026-09-22T18:00:40+00:00",
+      "last_seen": "2026-09-22T20:15:06+00:00",
       "notes": "False positive: the GitHub issue is the owner's own submission memo, not an assignable bounty. Algora's official Prettier challenge lists a winner; its first-successful-solution award has already been fulfilled.",
       "open": true,
       "payout_basis": "not verified",
@@ -378,7 +378,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "1410a4fed5de6eb83718",
-      "last_seen": "2026-09-22T18:00:40+00:00",
+      "last_seen": "2026-09-22T20:15:06+00:00",
       "notes": "Open engineering issue, but not a verified paid bounty: no fixed payout, payout method, acceptance/payment trigger, or assignee path is published. At least three competing claim/proposal comments already exist.",
       "open": true,
       "payout_basis": "not verified",
@@ -567,7 +567,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "3edc98b7d14fcff33d3c",
-      "last_seen": "2026-09-22T18:00:40+00:00",
+      "last_seen": "2026-09-22T20:15:06+00:00",
       "notes": "2023 suggestion of bounty platforms, not an offered paid task. Primary issue read 2026-09-22.",
       "open": true,
       "payout_basis": "not verified",
@@ -621,7 +621,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "45147c39842053097e88",
-      "last_seen": "2026-09-22T18:00:40+00:00",
+      "last_seen": "2026-09-22T20:15:06+00:00",
       "notes": "Unfunded $3 USDC-on-merge promise with multiple prior attempts, no maintainer assignment or payment proof; required API not verified. Source issue/comments/AGENTS/README checked 2026-09-22.",
       "open": true,
       "payout_basis": "not verified",
@@ -702,7 +702,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "7f0d310a9f3cdfa3ef36",
-      "last_seen": "2026-09-22T18:00:40+00:00",
+      "last_seen": "2026-09-22T20:15:06+00:00",
       "notes": "Discussion listing bounty-platform alternatives; not an available paid assignment.",
       "open": true,
       "payout_basis": "not verified",
@@ -803,7 +803,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "94b4ada4dfd1cd72eebd",
-      "last_seen": "2026-09-22T18:00:40+00:00",
+      "last_seen": "2026-09-22T20:15:06+00:00",
       "notes": "Platform feature implementation description; no published paid reward or assignment.",
       "open": true,
       "payout_basis": "not verified",
@@ -857,7 +857,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "9c8b680b2aae5eb5b2be",
-      "last_seen": "2026-09-22T18:00:40+00:00",
+      "last_seen": "2026-09-22T20:15:06+00:00",
       "notes": "Platform integration feature request; no published paid reward or assignment.",
       "open": true,
       "payout_basis": "not verified",
@@ -1037,7 +1037,7 @@
       },
       "first_seen": "2026-09-22T03:05:31+00:00",
       "id": "c295993d0a76ee42fdc5",
-      "last_seen": "2026-09-22T18:00:42+00:00",
+      "last_seen": "2026-09-22T20:15:07+00:00",
       "notes": "Verified from the original Make Community buyer post and complete public thread. The buyer expressed willingness to pay but published no workflow scope, budget, deadline, acceptance test, payment method, or payment trigger. At least 19 public pitches followed and the buyer posted no public clarification or assignment. No outreach sent.",
       "open": true,
       "payout_basis": "not verified",
@@ -1092,7 +1092,7 @@
       },
       "first_seen": "2026-09-21T20:00:00+00:00",
       "id": "e6100be982127b23dfb5",
-      "last_seen": "2026-09-22T18:00:40+00:00",
+      "last_seen": "2026-09-22T20:15:06+00:00",
       "notes": "Directory listing metadata for Algora; no paid assignment.",
       "open": true,
       "payout_basis": "not verified",
@@ -1182,7 +1182,7 @@
       },
       "first_seen": "2026-09-22T03:05:31+00:00",
       "id": "f634b8100222264c1dfb",
-      "last_seen": "2026-09-22T18:00:42+00:00",
+      "last_seen": "2026-09-22T20:15:07+00:00",
       "notes": "Verified from the original Make Community thread and all 37 public posts across both pages. The buyer published only a one-sentence request, with no fixed scope, budget, deadline, acceptance test, payment method, payment trigger, or assignment, and posted no public follow-up. At least 36 public replies/pitches create extreme competition. No outreach or spend.",
       "open": true,
       "payout_basis": "not verified",
@@ -1266,41 +1266,41 @@
       "verified": false
     }
   ],
-  "last_scan": "2026-09-22T18:00:44+00:00",
+  "last_scan": "2026-09-22T20:15:08+00:00",
   "observations": [
     {
-      "at": "2026-09-22T18:00:40+00:00",
+      "at": "2026-09-22T20:15:06+00:00",
       "count": 8,
       "result": "ok",
       "source": "Algora public bounties"
     },
     {
-      "at": "2026-09-22T18:00:41+00:00",
+      "at": "2026-09-22T20:15:06+00:00",
       "count": 0,
       "result": "ok",
       "source": "Opire public bounties"
     },
     {
-      "at": "2026-09-22T18:00:41+00:00",
+      "at": "2026-09-22T20:15:07+00:00",
       "count": 3,
       "result": "ok",
       "source": "n8n Community Jobs buyers"
     },
     {
-      "at": "2026-09-22T18:00:42+00:00",
+      "at": "2026-09-22T20:15:07+00:00",
       "count": 3,
       "result": "ok",
       "source": "Make Community Hire Help buyers"
     },
     {
-      "at": "2026-09-22T18:00:44+00:00",
+      "at": "2026-09-22T20:15:08+00:00",
       "result": "not modified",
       "source": "WordPress Jobs recent listings"
     }
   ],
   "scan_health": "ok",
   "scan_run": {
-    "at": "2026-09-22T18:00:44+00:00",
+    "at": "2026-09-22T20:15:08+00:00",
     "status": "ok"
   },
   "version": 1
