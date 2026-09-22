@@ -3,12 +3,57 @@
     "accepted_work": 0,
     "leased": 0,
     "parked": 33,
-    "queued": 0,
-    "submitted_checks": 0,
-    "verifications": 0
+    "queued": 4,
+    "submitted_checks": 1,
+    "verifications": 3
   },
-  "generated_at": "2026-09-22T12:51:01+00:00",
-  "jobs": [],
+  "generated_at": "2026-09-22T17:21:08+00:00",
+  "jobs": [
+    {
+      "id": "submitted-check-33e39857abc92ce6b9a1",
+      "item_id": "33e39857abc92ce6b9a1",
+      "kind": "submitted-check",
+      "priority": 200,
+      "role": "Collector",
+      "safe_next_action": "Check the official source for feedback or payout status; record the result.",
+      "source_fingerprint": "d7378c69df17a8ffcf88afd7",
+      "source_url": "https://jobs.wordpress.net/job/ui-ux-designer-wordpress-developer-for-3d-modeling-service-website",
+      "status": "submitted"
+    },
+    {
+      "id": "verify-0f6bfd099d3dc585046b",
+      "item_id": "0f6bfd099d3dc585046b",
+      "kind": "verify",
+      "priority": 100,
+      "role": "Verifier",
+      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
+      "source_fingerprint": "dda2eedb33369aa85927706e",
+      "source_url": "https://community.n8n.io/t/looking-for-n8n-make-automation-specialist-for-ongoing-fixed-price-projects/315672",
+      "status": "lead"
+    },
+    {
+      "id": "verify-2582181d17912e8129f1",
+      "item_id": "2582181d17912e8129f1",
+      "kind": "verify",
+      "priority": 100,
+      "role": "Verifier",
+      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
+      "source_fingerprint": "a52c9a0676f3254e8000d71d",
+      "source_url": "https://community.n8n.io/t/seeking-full-time-job-in-ai-automation-n8n-workflow-builder-client-interaction-business-process/315516",
+      "status": "lead"
+    },
+    {
+      "id": "verify-6d81b4b8c63ee62fecd9",
+      "item_id": "6d81b4b8c63ee62fecd9",
+      "kind": "verify",
+      "priority": 100,
+      "role": "Verifier",
+      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
+      "source_fingerprint": "0aaa07872d16a379d1706202",
+      "source_url": "https://community.n8n.io/t/buscamos-ai-automation-engineer-para-construir-nuestro-sistema-de-soporte-con-ia/315655",
+      "status": "lead"
+    }
+  ],
   "max_jobs": 5,
   "version": 1
 }
