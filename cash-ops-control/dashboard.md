@@ -1,13 +1,13 @@
 # Cash Ops Control
 
-Updated: 2026-09-22T08:09:33+00:00  
+Updated: 2026-09-22T08:12:00+00:00  
 Scan health: **ok**
 
 ## Execution queue
 
-Queued: **0/5** · Leased: **1** · Parked: **32**  
+Queued: **0/5** · Leased: **0** · Parked: **33**  
 Accepted/application: **0** · Submitted checks: **0** · Verifications: **0**  
-Next queued work: No claimable queued work.
+Next queued work: None.
 
 ## Financial ledger
 
@@ -22,7 +22,7 @@ Next queued work: No claimable queued work.
 | Net | $0.00 | Recorded collection less recorded spend |
 
 Applications/claims in progress: **1**  
-Best next action: No claimable queued work.  
+Best next action: No queued work; await a buyer reply, accepted assignment, material source update, or next deterministic scan.  
 External worker status: latest scan run **ok** at 2026-09-22T08:09:33+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
@@ -30,7 +30,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 | Status | Count |
 |---|---:|
-| lead | 1 |
+| lead | 0 |
 | qualified | 0 |
 | claimed | 0 |
 | working | 0 |
@@ -38,7 +38,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 | blocked | 4 |
 | submitted | 1 |
 | payout | 0 |
-| rejected | 32 |
+| rejected | 33 |
 
 ## Source observations
 

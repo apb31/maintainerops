@@ -198,16 +198,20 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
-        "current_job": {
+        "last_job": {
           "id": "verify-f634b8100222264c1dfb",
           "kind": "verify",
           "source_fingerprint": "57223d8c2752c15a8736092d"
         },
-        "lease": {
-          "claimed_at": "2026-09-22T08:06:07+00:00",
-          "expires_at": "2026-09-22T09:06:07+00:00",
-          "owner": "hourly-executor"
-        }
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-22T08:12:00+00:00",
+        "last_note": "Original buyer never clarified or assigned the work after at least 36 public replies; no funded, scoped assignment path. No outreach or spend.",
+        "checkpoint": {
+          "at": "2026-09-22T08:12:00+00:00",
+          "summary": "Original buyer post and every public reply reviewed. Rejected for this queue cycle: no scope/payment/acceptance/assignment and extreme competition."
+        },
+        "parked": true,
+        "parked_reason": "rejected"
       },
       "first_seen": "2026-09-22T03:05:31+00:00",
       "id": "f634b8100222264c1dfb",
@@ -219,11 +223,12 @@
       "source": "Make Community Hire Help buyers",
       "source_comments": null,
       "source_updated_at": null,
-      "status": "lead",
+      "status": "rejected",
       "summary": "<p>I need help with a scenario to connect the WhatsApp Cloud API with Google Sheets.</p> <p><small>36 posts - 32 participants</small></p> <p><a href=\"https://community.make.com/t/i-need-help-with-a-scenario-to-connect-the-whatsapp-cloud-api-with-google-sheets/115156\">Read full to",
       "title": "I need help with a scenario to connect the WhatsApp Cloud API with Google Sheets",
       "url": "https://community.make.com/t/i-need-help-with-a-scenario-to-connect-the-whatsapp-cloud-api-with-google-sheets/115156",
-      "verified": false
+      "verified": true,
+      "notes": "Verified from the original Make Community thread and all 37 public posts across both pages. The buyer published only a one-sentence request, with no fixed scope, budget, deadline, acceptance test, payment method, payment trigger, or assignment, and posted no public follow-up. At least 36 public replies/pitches create extreme competition. No outreach or spend."
     },
     {
       "accepted_payout": null,
