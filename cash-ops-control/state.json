@@ -234,12 +234,16 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
-        "lease": {
-          "owner": "hourly-executor",
-          "claimed_at": "2026-09-22T07:26:25+00:00",
-          "expires_at": "2026-09-22T08:26:25+00:00"
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-22T07:31:00+00:00",
+        "last_note": "Genuine buyer request, but no fixed scope or payout terms and heavy competition; no assignable paid task yet. No outreach or spend.",
+        "checkpoint": {
+          "at": "2026-09-22T07:31:00+00:00",
+          "summary": "Original buyer post and public replies reviewed. Rejected for this queue cycle: missing scope/payment terms and no assignment despite 19 public pitches."
         },
-        "current_job": {
+        "parked": true,
+        "parked_reason": "rejected",
+        "last_job": {
           "id": "verify-c295993d0a76ee42fdc5",
           "kind": "verify",
           "source_fingerprint": "4ea8c1e3bdb76d529c9b2ad1"
@@ -255,11 +259,12 @@
       "source": "Make Community Hire Help buyers",
       "source_comments": null,
       "source_updated_at": null,
-      "status": "lead",
+      "status": "rejected",
       "summary": "<p>I’ve been playing around Make for i’m working on, but I’m afraid I’m stuck. I’m happy to pay for help at this point. It’s a simple workflow but I only started using Make a few days ago, so it all looks like gibberish to me.</p> <p>I’d be happy to discuss the workflow in more d",
       "title": "Make freelancer needed for project",
       "url": "https://community.make.com/t/make-freelancer-needed-for-project/115431",
-      "verified": false
+      "verified": true,
+      "notes": "Verified from the original Make Community buyer post and complete public thread. The buyer expressed willingness to pay but published no workflow scope, budget, deadline, acceptance test, payment method, or payment trigger. At least 19 public pitches followed and the buyer posted no public clarification or assignment. No outreach sent."
     },
     {
       "accepted_payout": null,

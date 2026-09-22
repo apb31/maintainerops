@@ -5,7 +5,7 @@ Scan health: **ok**
 
 ## Execution queue
 
-Queued: **1/5** · Leased: **1** · Parked: **31**  
+Queued: **1/5** · Leased: **0** · Parked: **32**  
 Accepted/application: **0** · Submitted checks: **0** · Verifications: **1**  
 Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.make.com/t/i-need-help-with-a-scenario-to-connect-the-whatsapp-cloud-api-with-google-sheets/115156]
 
@@ -30,7 +30,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 | Status | Count |
 |---|---:|
-| lead | 2 |
+| lead | 1 |
 | qualified | 0 |
 | claimed | 0 |
 | working | 0 |
@@ -38,7 +38,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 | blocked | 4 |
 | submitted | 1 |
 | payout | 0 |
-| rejected | 31 |
+| rejected | 32 |
 
 ## Source observations
 
