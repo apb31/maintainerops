@@ -1,13 +1,13 @@
 {
   "counts": {
-    "queued": 3,
     "accepted_work": 0,
-    "submitted_checks": 0,
-    "verifications": 3,
     "leased": 1,
-    "parked": 33
+    "parked": 33,
+    "queued": 4,
+    "submitted_checks": 0,
+    "verifications": 4
   },
-  "generated_at": "2026-09-22T17:50:10+00:00",
+  "generated_at": "2026-09-22T17:53:50+00:00",
   "jobs": [
     {
       "id": "verify-0f6bfd099d3dc585046b",
@@ -40,6 +40,17 @@
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
       "source_fingerprint": "0aaa07872d16a379d1706202",
       "source_url": "https://community.n8n.io/t/buscamos-ai-automation-engineer-para-construir-nuestro-sistema-de-soporte-con-ia/315655",
+      "status": "lead"
+    },
+    {
+      "id": "verify-8ca9a1560de5dd932f33",
+      "item_id": "8ca9a1560de5dd932f33",
+      "kind": "verify",
+      "priority": 100,
+      "role": "Verifier",
+      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
+      "source_fingerprint": "37d6c10130bb12258281a3a7",
+      "source_url": "https://community.make.com/t/need-help-using-make-to-float-information-from-katana-into-qbo/115721",
       "status": "lead"
     }
   ],
