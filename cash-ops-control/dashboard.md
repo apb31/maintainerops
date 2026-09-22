@@ -1,6 +1,6 @@
 # Cash Ops Control
 
-Updated: 2026-09-22T03:05:42+00:00  
+Updated: 2026-09-22T03:09:11+00:00  
 Scan health: **ok**
 
 ## Execution queue
@@ -23,7 +23,7 @@ Next queued work: Verifier: Verify source ownership, open status, eligibility, f
 
 Applications/claims in progress: **1**  
 Best next action: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://github.com/copperheadhq/copperhead/issues/233]  
-External worker status: latest scan run **ok** at 2026-09-22T03:05:42+00:00; execution host heartbeat is not available.  
+External worker status: latest scan run **ok** at 2026-09-22T03:09:11+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Pipeline
@@ -42,12 +42,12 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Source observations
 
-- Algora public bounties: ok (8) at 2026-09-22T03:05:15+00:00
-- Opire public bounties: ok (0) at 2026-09-22T03:05:20+00:00
-- n8n Community Jobs buyers: ok (0) at 2026-09-22T03:05:25+00:00
-- Make Community Hire Help buyers: ok (2) at 2026-09-22T03:05:31+00:00
-- WordPress Jobs recent listings: ok (7) at 2026-09-22T03:05:39+00:00
-- track:acdf134e0c1790916977: ok (1) at 2026-09-22T03:05:42+00:00
+- Algora public bounties: ok (8) at 2026-09-22T03:09:08+00:00
+- Opire public bounties: ok (0) at 2026-09-22T03:09:08+00:00
+- n8n Community Jobs buyers: ok (0) at 2026-09-22T03:09:09+00:00
+- Make Community Hire Help buyers: ok (2) at 2026-09-22T03:09:10+00:00
+- WordPress Jobs recent listings: not modified (n/a) at 2026-09-22T03:09:10+00:00
+- track:acdf134e0c1790916977: ok (1) at 2026-09-22T03:09:11+00:00
 
 ## Errors
 
