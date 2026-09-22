@@ -198,15 +198,19 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
-        "lease": {
-          "owner": "hourly-executor",
-          "claimed_at": "2026-09-22T19:25:00+00:00",
-          "expires_at": "2026-09-22T20:25:00+00:00"
-        },
-        "current_job": {
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-22T19:31:00+00:00",
+        "last_note": "Original post and public replies reviewed; contingent downstream payment, no concrete scope/fixed price/payout rail, and 11 competing proposals. No outreach or spend.",
+        "parked": true,
+        "parked_reason": "rejected",
+        "last_job": {
           "id": "verify-0f6bfd099d3dc585046b",
           "kind": "verify",
           "source_fingerprint": "dda2eedb33369aa85927706e"
+        },
+        "checkpoint": {
+          "at": "2026-09-22T19:31:00+00:00",
+          "summary": "Rejected after primary-source verification; terms are contingent and incomplete, with 11 public competitors. No application or spend."
         }
       },
       "first_seen": "2026-09-22T17:21:07+00:00",
@@ -217,13 +221,14 @@
       "published_at": "2026-09-22T16:54:24+00:00",
       "score": 35,
       "source": "n8n Community Jobs buyers",
-      "source_comments": null,
+      "source_comments": 11,
       "source_updated_at": null,
-      "status": "lead",
+      "status": "rejected",
       "summary": "<p>Hi,</p> <p>I’m building a small automation service and I’m looking for reliable n8n / Make specialists for ongoing project-based work.</p> <p>I’m looking for people who can work on clearly defined fixed-price projects with agreed deadlines.</p> <p>Typical work may include: • n",
       "title": "Looking for n8n / Make Automation Specialist for Ongoing Fixed-Price Projects",
       "url": "https://community.n8n.io/t/looking-for-n8n-make-automation-specialist-for-ongoing-fixed-price-projects/315672",
-      "verified": false
+      "verified": false,
+      "notes": "Verified from the original n8n Community buyer post and public thread on 2026-09-22. No concrete project, fixed amount, payout rail, or independent payment guarantee; payment is contingent on the buyer's end client approving a milestone and releasing funds. Eleven public proposals already exist. No outreach or spend."
     },
     {
       "accepted_payout": null,

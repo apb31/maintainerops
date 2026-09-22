@@ -5,7 +5,7 @@ Scan health: **ok**
 
 ## Execution queue
 
-Queued: **3/5** · Leased: **1** · Parked: **33**  
+Queued: **3/5** · Leased: **0** · Parked: **34**  
 Accepted/application: **0** · Submitted checks: **0** · Verifications: **3**  
 Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/seeking-full-time-job-in-ai-automation-n8n-workflow-builder-client-interaction-business-process/315516]
 
@@ -30,7 +30,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 | Status | Count |
 |---|---:|
-| lead | 4 |
+| lead | 3 |
 | qualified | 0 |
 | claimed | 0 |
 | working | 0 |
@@ -38,7 +38,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 | blocked | 4 |
 | submitted | 1 |
 | payout | 0 |
-| rejected | 33 |
+| rejected | 34 |
 
 ## Source observations
 
