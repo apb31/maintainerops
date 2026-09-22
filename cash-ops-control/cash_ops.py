@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import email.utils
 import hashlib
 import json
 import math
@@ -71,6 +72,15 @@ def canonical_url(url: str) -> str:
     return urllib.parse.urlunsplit((scheme, host + port, path, query, ""))
 
 
+def canonical_topic_url(url: str) -> str:
+    """Normalize feed links and collapse Discourse post links to their topic."""
+    url = canonical_url(url)
+    parsed = urllib.parse.urlsplit(url)
+    match = re.fullmatch(r"(/t/[^/]+/\d+)(?:/\d+)?", parsed.path)
+    path = match.group(1) if match else parsed.path
+    return urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, path, parsed.query, ""))
+
+
 def item_id(url: str) -> str:
     return hashlib.sha256(canonical_url(url).encode()).hexdigest()[:20]
 
@@ -124,11 +134,50 @@ def _node_text(node: ET.Element, names: tuple[str, ...]) -> str:
     return ""
 
 
-def parse_rss(payload: bytes, source: str) -> list[dict]:
+def parse_feed_timestamp(value: str) -> datetime | None:
+    if not value:
+        return None
+    try:
+        parsed = email.utils.parsedate_to_datetime(value)
+    except (TypeError, ValueError):
+        try:
+            parsed = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def _feed_published_at(node: ET.Element) -> datetime | None:
+    """Prefer original publication fields over mutable Atom update timestamps."""
+    for name in ("pubdate", "published", "date", "updated"):
+        parsed = parse_feed_timestamp(_node_text(node, (name,)))
+        if parsed:
+            return parsed
+    return None
+
+
+def parse_rss(payload: bytes, source: str, rules: dict | None = None, as_of: datetime | None = None) -> list[dict]:
     root = ET.fromstring(payload)
-    rows = []
+    rules = rules or {}
+    buyer_signals = [clean(value).casefold() for value in rules.get("title_buyer_signals", []) if clean(value)]
+    seller_exclusions = [clean(value).casefold() for value in rules.get("title_seller_exclusions", []) if clean(value)]
+    max_age = rules.get("max_age_days")
+    reference = as_of or datetime.now(timezone.utc)
+    reference = reference.replace(tzinfo=reference.tzinfo or timezone.utc).astimezone(timezone.utc)
+    rows = {}
     for node in root.iter():
         if node.tag.rsplit("}", 1)[-1].lower() not in ("item", "entry"):
+            continue
+        title = _node_text(node, ("title",))
+        folded = clean(title).casefold()
+        if seller_exclusions and any(term in folded for term in seller_exclusions):
+            continue
+        if buyer_signals and not any(term in folded for term in buyer_signals):
+            continue
+        published = _feed_published_at(node)
+        if max_age is not None and (published is None or published < reference - timedelta(days=max(0, float(max_age))) or published > reference):
             continue
         link = _node_text(node, ("link",))
         if not link:
@@ -137,8 +186,15 @@ def parse_rss(payload: bytes, source: str) -> list[dict]:
                     link = child.attrib["href"]
                     break
         if link:
-            rows.append(candidate(link, _node_text(node, ("title",)), _node_text(node, ("description", "summary", "content")), source))
-    return rows
+            summary = _node_text(node, ("description", "summary", "content"))
+            row = candidate(canonical_topic_url(link), title, summary, source)
+            if "summary_max_chars" in rules:
+                row["summary"] = clean(summary, max(0, int(rules["summary_max_chars"])))
+            if published:
+                row["published_at"] = published.isoformat()
+            rows.setdefault(row["id"], row)
+    limit = max(0, int(rules["max_items"])) if "max_items" in rules else None
+    return list(rows.values())[:limit]
 
 
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
@@ -323,7 +379,8 @@ def scan(config_path: Path = CONFIG, state_path: Path = STATE) -> dict:
         query = urllib.parse.urlencode({"q": row["query"], "per_page": min(int(row.get("limit", 30)), 50), "sort": "updated"})
         sources.append((row["name"], f"https://api.github.com/search/issues?{query}", parse_github))
     for row in cfg.get("rss", []):
-        if row.get("enabled", True): sources.append((row["name"], row["url"], parse_rss))
+        if row.get("enabled", True):
+            sources.append((row["name"], row["url"], lambda payload, name, rules=row: parse_rss(payload, name, rules)))
     track_priority = {"submitted": 5, "review": 4, "working": 3, "claimed": 2, "qualified": 1, "lead": 0}
     trackable = sorted(state.get("items", []), key=lambda x: (track_priority.get(x.get("status", "lead"), -1), money(x.get("accepted_payout"))), reverse=True)
     for row in trackable:
@@ -485,7 +542,7 @@ def write_dashboard(state: dict, path: Path = DASHBOARD, queue: dict | None = No
              f"| Accepted | ${accepted:,.2f} | Operator-recorded agreed payouts; not yet cash |", f"| Collected | ${collected:,.2f} | Operator-recorded money received |",
              f"| Pending payout | ${pending:,.2f} | Accepted less recorded collection, floored per item |", f"| Active paid work | ${active:,.2f} | Accepted value in active work stages |",
              f"| Spend | ${spend:,.2f} | Operator-recorded costs |", f"| Net | ${collected - spend:,.2f} | Recorded collection less recorded spend |",
-             "", f"Applications/claims in progress: **{claims}**  ", f"Best next action: {next_action(items)}  ",
+             "", f"Applications/claims in progress: **{claims}**  ", f"Best next action: {next_work}  ",
              f"External worker status: latest scan run **{state.get('scan_health', 'not run')}** at {state.get('last_scan', 'unavailable')}; execution host heartbeat is not available.  ",
              "Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.", "", "## Pipeline", "",
              "| Status | Count |", "|---|---:|"]

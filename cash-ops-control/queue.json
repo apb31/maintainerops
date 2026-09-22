@@ -2,66 +2,44 @@
   "counts": {
     "accepted_work": 0,
     "leased": 0,
-    "parked": 2,
-    "queued": 5,
+    "parked": 30,
+    "queued": 3,
     "submitted_checks": 0,
-    "verifications": 5
+    "verifications": 3
   },
-  "generated_at": "2026-09-22T01:55:06+00:00",
+  "generated_at": "2026-09-22T03:08:41+00:00",
   "jobs": [
     {
-      "id": "verify-1808a0c602aa5d9dcdc2",
-      "item_id": "1808a0c602aa5d9dcdc2",
+      "id": "verify-acdf134e0c1790916977",
+      "item_id": "acdf134e0c1790916977",
       "kind": "verify",
       "priority": 100,
       "role": "Verifier",
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "93ba36d1356b4da11c074967",
-      "source_url": "https://github.com/IvanTop082/Proopmpter/issues/1",
+      "source_fingerprint": "c2a88bdf11a2bbb086d0c660",
+      "source_url": "https://github.com/copperheadhq/copperhead/issues/233",
       "status": "lead"
     },
     {
-      "id": "verify-23648899e8c4ff068c69",
-      "item_id": "23648899e8c4ff068c69",
+      "id": "verify-c295993d0a76ee42fdc5",
+      "item_id": "c295993d0a76ee42fdc5",
       "kind": "verify",
       "priority": 100,
       "role": "Verifier",
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "51b1a59deeeccfea182556bb",
-      "source_url": "https://github.com/ValenciaLim/opik-galacticode/issues/1",
+      "source_fingerprint": "4ea8c1e3bdb76d529c9b2ad1",
+      "source_url": "https://community.make.com/t/make-freelancer-needed-for-project/115431",
       "status": "lead"
     },
     {
-      "id": "verify-2447ca748dfe7da6d196",
-      "item_id": "2447ca748dfe7da6d196",
+      "id": "verify-f634b8100222264c1dfb",
+      "item_id": "f634b8100222264c1dfb",
       "kind": "verify",
       "priority": 100,
       "role": "Verifier",
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "26c857b269cd9e89ef16dce8",
-      "source_url": "https://github.com/algora-io/algora/issues/208",
-      "status": "lead"
-    },
-    {
-      "id": "verify-33ed148138b70f539324",
-      "item_id": "33ed148138b70f539324",
-      "kind": "verify",
-      "priority": 100,
-      "role": "Verifier",
-      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "a49511876cb9a07152cc0823",
-      "source_url": "https://github.com/algora-io/algora/issues/210",
-      "status": "lead"
-    },
-    {
-      "id": "verify-3edc98b7d14fcff33d3c",
-      "item_id": "3edc98b7d14fcff33d3c",
-      "kind": "verify",
-      "priority": 100,
-      "role": "Verifier",
-      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "cf4b3d075b997702a6afc94e",
-      "source_url": "https://github.com/humanprotocol/human-protocol/issues/1257",
+      "source_fingerprint": "57223d8c2752c15a8736092d",
+      "source_url": "https://community.make.com/t/i-need-help-with-a-scenario-to-connect-the-whatsapp-cloud-api-with-google-sheets/115156",
       "status": "lead"
     }
   ],

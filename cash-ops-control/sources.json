@@ -4,7 +4,7 @@
   "github_searches": [
     {
       "name": "Algora public bounties",
-      "query": "is:issue is:open \"algora.io\" in:body",
+      "query": "is:issue is:open \"algora.io\" \"bounty\" in:body -repo:algora-io/algora",
       "limit": 30
     },
     {
@@ -13,5 +13,90 @@
       "limit": 30
     }
   ],
-  "rss": []
+  "rss": [
+    {
+      "name": "n8n Community Jobs buyers",
+      "url": "https://community.n8n.io/c/jobs/13.rss",
+      "enabled": true,
+      "title_buyer_signals": [
+        "hiring",
+        "looking for",
+        "seeking",
+        "need help",
+        "need a",
+        "need an",
+        "wanted",
+        "job offer",
+        "paid",
+        "needed",
+        "buscamos",
+        "se busca",
+        "necesito",
+        "necesitamos"
+      ],
+      "title_seller_exclusions": [
+        "for hire",
+        "available for",
+        "looking for work",
+        "looking for projects",
+        "seeking opportunities",
+        "offering my",
+        "my services",
+        "hire me",
+        "freelancer available"
+      ],
+      "max_age_days": 14,
+      "max_items": 8,
+      "summary_max_chars": 280
+    },
+    {
+      "name": "Make Community Hire Help buyers",
+      "url": "https://community.make.com/c/hire-a-pro/hire-help/74.rss",
+      "enabled": true,
+      "title_buyer_signals": [
+        "hiring",
+        "looking for",
+        "seeking",
+        "need help",
+        "need a",
+        "need an",
+        "wanted",
+        "job offer",
+        "paid",
+        "needed",
+        "buscamos",
+        "se busca",
+        "necesito",
+        "necesitamos"
+      ],
+      "title_seller_exclusions": [
+        "for hire",
+        "available for",
+        "looking for work",
+        "looking for projects",
+        "seeking opportunities",
+        "offering my",
+        "my services",
+        "hire me",
+        "freelancer available"
+      ],
+      "max_age_days": 14,
+      "max_items": 8,
+      "summary_max_chars": 280
+    },
+    {
+      "name": "WordPress Jobs recent listings",
+      "url": "https://jobs.wordpress.net/feed/",
+      "enabled": true,
+      "title_seller_exclusions": [
+        "full-time",
+        "full time",
+        "sales",
+        "support"
+      ],
+      "max_age_days": 14,
+      "max_items": 8,
+      "summary_max_chars": 280
+    }
+  ]
 }

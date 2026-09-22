@@ -1,6 +1,6 @@
 # Cash Ops Control
 
-Cash Ops Control is a deterministic Python 3.11+ intake and ledger for public, explicitly configured bounty sources. It discovers leads; it does not contact anyone, accept work, submit claims, execute source text, or prove income. An operator must verify scope, eligibility, payout terms, and identity from authoritative evidence before moving an item from `lead` to `qualified` or performing outreach. That operator may be an AI following the configured policy; human action is reserved for login, spending, identity, contracts, and other material decisions.
+Cash Ops Control is a deterministic Python 3.11+ intake and ledger for public, explicitly configured bounty and buyer-request sources. It discovers leads; it does not contact anyone, accept work, submit claims, execute source text, or prove income. An operator must verify scope, eligibility, payout terms, and identity from authoritative evidence before moving an item from `lead` to `qualified` or performing outreach. That operator may be an AI following the configured policy; human action is reserved for login, spending, identity, contracts, and other material decisions.
 
 The eight role names are logical stages, not resident agents or autonomous Astra sessions: Scout (`lead`), Verifier (`qualified`), Claimant (`claimed`), Builder (`working`), Reviewer (`review`), Submitter (`submitted`), Collector (`payout`), and Closer (`rejected`). `blocked` is a pause label usable from any stage.
 
@@ -15,11 +15,13 @@ python cash_ops.py scan
 python cash_ops.py report
 ```
 
-Edit `sources.json` to change the narrow GitHub public issue queries. The initial queries only look for public issues referencing Algora or Opire. Add explicit RSS/Atom feeds like this:
+Edit `sources.json` to change the narrow GitHub public issue queries. The GitHub queries look for Algora bounty mentions or Opire references; the configured RSS feeds add recent buyer requests. Add explicit RSS/Atom feeds like this:
 
 ```json
 "rss": [{"name": "Maintainer bounty feed", "url": "https://example.org/bounties.xml", "enabled": true}]
 ```
+
+RSS feeds may optionally set `title_buyer_signals`, `title_seller_exclusions`, `max_age_days`, `max_items`, and `summary_max_chars`. Buyer signals require at least one title match, seller exclusions always win, and an age limit rejects entries whose RSS `pubDate` or Atom `published`/`updated` timestamp is missing or too old. Feeds without these keys retain the original accept-all behavior. Discourse post links are collapsed to one canonical topic URL before deduplication. The default n8n and Make community feeds admit recent buyer posts while excluding common “for hire” seller titles; all three use a 14-day age window. WordPress Jobs additionally excludes full-time, sales, and support titles. Each source stores at most eight short public summaries.
 
 Each request has a configured timeout, a 5 MB response cap, conditional ETag/Last-Modified caching, and a descriptive user agent. Auth is sent only to the exact GitHub API host, and authenticated cross-origin redirects are refused. URLs are canonicalized and deduplicated. The scanner retains old leads when a source is unavailable, refreshes up to ten tracked active GitHub issues, and records observations, errors, and scan health in both `state.json` and `dashboard.md`.
 
@@ -57,7 +59,7 @@ The external scanner regenerates `queue.json` with at most five actionable publi
 
 A separate ChatGPT automation, **Cash Ops — ejecutar cola**, is configured hourly at :05 (America/Santo_Domingo). A second automation handles matching commercial Gmail events. These automations perform authorized reasoning, applications, replies and deliverables; Python itself does not send proposals or operate an LLM. They remain subject to account quotas, connector access and service availability. No external paid inference is configured. GitHub schedules are best effort, so 15 minutes is the requested cadence, not an uptime guarantee.
 
-The hourly executor reads the small queue and dashboard first, exits quietly if nothing is due, and handles one job per run. Its initial speculative prospecting limit is two new verifications/applications per local day; accepted work and buyer replies take priority independently. Keep the daily counter and email reservations in the private compact state. Suppress routine scan/proposal/claim notices and repeated unchanged blockers; notify only new material acceptance, delivery, payment or indispensable user intervention.
+The hourly executor reads the small queue and dashboard first, exits quietly if nothing is due, and handles one job per run. Its speculative prospecting limit is four new verifications/applications per local day; accepted work and buyer replies take priority independently. Keep the daily counter and email reservations in the private compact state. Suppress routine scan/proposal/claim notices and repeated unchanged blockers; notify only new material acceptance, delivery, payment or indispensable user intervention.
 
 ### Claim, act, checkpoint
 
