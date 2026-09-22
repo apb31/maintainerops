@@ -1,25 +1,14 @@
 {
   "counts": {
     "accepted_work": 0,
-    "leased": 0,
+    "leased": 1,
     "parked": 31,
-    "queued": 2,
+    "queued": 1,
     "submitted_checks": 0,
-    "verifications": 2
+    "verifications": 1
   },
-  "generated_at": "2026-09-22T04:12:00+00:00",
+  "generated_at": "2026-09-22T07:26:25+00:00",
   "jobs": [
-    {
-      "id": "verify-c295993d0a76ee42fdc5",
-      "item_id": "c295993d0a76ee42fdc5",
-      "kind": "verify",
-      "priority": 100,
-      "role": "Verifier",
-      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "4ea8c1e3bdb76d529c9b2ad1",
-      "source_url": "https://community.make.com/t/make-freelancer-needed-for-project/115431",
-      "status": "lead"
-    },
     {
       "id": "verify-f634b8100222264c1dfb",
       "item_id": "f634b8100222264c1dfb",
