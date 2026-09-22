@@ -1,25 +1,14 @@
 {
   "counts": {
     "accepted_work": 0,
-    "leased": 0,
+    "leased": 1,
     "parked": 33,
-    "queued": 4,
+    "queued": 3,
     "submitted_checks": 0,
-    "verifications": 4
+    "verifications": 3
   },
-  "generated_at": "2026-09-22T18:00:44+00:00",
+  "generated_at": "2026-09-22T19:25:00+00:00",
   "jobs": [
-    {
-      "id": "verify-0f6bfd099d3dc585046b",
-      "item_id": "0f6bfd099d3dc585046b",
-      "kind": "verify",
-      "priority": 100,
-      "role": "Verifier",
-      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "dda2eedb33369aa85927706e",
-      "source_url": "https://community.n8n.io/t/looking-for-n8n-make-automation-specialist-for-ongoing-fixed-price-projects/315672",
-      "status": "lead"
-    },
     {
       "id": "verify-2582181d17912e8129f1",
       "item_id": "2582181d17912e8129f1",
