@@ -1,13 +1,13 @@
 # Cash Ops Control
 
-Updated: 2026-09-22T07:38:22+00:00  
+Updated: 2026-09-22T08:06:07+00:00  
 Scan health: **ok**
 
 ## Execution queue
 
-Queued: **1/5** · Leased: **0** · Parked: **32**  
-Accepted/application: **0** · Submitted checks: **0** · Verifications: **1**  
-Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.make.com/t/i-need-help-with-a-scenario-to-connect-the-whatsapp-cloud-api-with-google-sheets/115156]
+Queued: **0/5** · Leased: **1** · Parked: **32**  
+Accepted/application: **0** · Submitted checks: **0** · Verifications: **0**  
+Next queued work: None; one verification is leased to `hourly-executor` until 2026-09-22T09:06:07+00:00.
 
 ## Financial ledger
 

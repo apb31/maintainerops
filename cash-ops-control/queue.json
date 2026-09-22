@@ -1,13 +1,13 @@
 {
   "counts": {
     "accepted_work": 0,
-    "leased": 0,
+    "leased": 1,
     "parked": 32,
-    "queued": 1,
+    "queued": 0,
     "submitted_checks": 0,
-    "verifications": 1
+    "verifications": 0
   },
-  "generated_at": "2026-09-22T07:38:22+00:00",
+  "generated_at": "2026-09-22T08:06:07+00:00",
   "jobs": [
     {
       "id": "verify-f634b8100222264c1dfb",
@@ -18,7 +18,12 @@
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
       "source_fingerprint": "57223d8c2752c15a8736092d",
       "source_url": "https://community.make.com/t/i-need-help-with-a-scenario-to-connect-the-whatsapp-cloud-api-with-google-sheets/115156",
-      "status": "lead"
+      "status": "leased",
+      "lease": {
+        "owner": "hourly-executor",
+        "claimed_at": "2026-09-22T08:06:07+00:00",
+        "expires_at": "2026-09-22T09:06:07+00:00"
+      }
     }
   ],
   "max_jobs": 5,
