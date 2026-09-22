@@ -5,7 +5,7 @@ Scan health: **ok**
 
 ## Execution queue
 
-Queued: **2/5** · Leased: **1** · Parked: **30**  
+Queued: **2/5** · Leased: **0** · Parked: **31**  
 Accepted/application: **0** · Submitted checks: **0** · Verifications: **2**  
 Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.make.com/t/make-freelancer-needed-for-project/115431]
 
@@ -30,7 +30,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 | Status | Count |
 |---|---:|
-| lead | 3 |
+| lead | 2 |
 | qualified | 0 |
 | claimed | 0 |
 | working | 0 |
@@ -38,7 +38,7 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 | blocked | 4 |
 | submitted | 1 |
 | payout | 0 |
-| rejected | 30 |
+| rejected | 31 |
 
 ## Source observations
 

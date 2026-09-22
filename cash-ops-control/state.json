@@ -198,12 +198,16 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
-        "lease": {
-          "owner": "hourly-executor",
-          "claimed_at": "2026-09-22T04:08:28+00:00",
-          "expires_at": "2026-09-22T05:08:28+00:00"
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-22T04:12:00+00:00",
+        "last_note": "Already implemented in #224; no fixed payout or assignable funded scope. No outreach, claim, code, or spend.",
+        "checkpoint": {
+          "at": "2026-09-22T04:12:00+00:00",
+          "summary": "Official issue and comments checked. Existing implementation predates queue entry; rejected as stale/unfunded false positive."
         },
-        "current_job": {
+        "parked": true,
+        "parked_reason": "rejected",
+        "last_job": {
           "id": "verify-acdf134e0c1790916977",
           "kind": "verify",
           "source_fingerprint": "c2a88bdf11a2bbb086d0c660"
@@ -218,11 +222,12 @@
       "source": "Algora public bounties",
       "source_comments": 2,
       "source_updated_at": "2026-08-18T17:13:05Z",
-      "status": "lead",
+      "status": "rejected",
       "summary": "## What happened After #224 (frame fit, text collisions, compaction), page size across the corpus floors at roughly 2.5x to 4x the human's total sheet area, with utilization above the 50% floor on most boards. The excess is no longer packing: it is the drawing idiom for stacked passives. Every capacitor in a decoupling bank draws as an isolated island: its own rail symbol above, its own GND symbol below, no wiring to its neighbours. stickhub's shared VBUS bank is 16 caps that the designer drew hanging off ONE +5V trunk and ONE GND trunk, two power symbols total, with junction dots doing the counting. The engine emits 26 power symbols for the same bank and joins nothing. cm5_minima's top row is 28 such islands; jetson's banks are bigger. Each island is several times the drawn footprint of the human's wired equivalent, which is exactly the residual 2.5x to 4x. Page-size comparison at #224's head (engine sheet over the human's total sheet area): interf_u 1.0x, ecc83 1.0x, royalblue 1.3x, cm5_minima 2.5x, tiny_tapeout 2.7x, openair-max 2.7x, kit-dev-coldfire 3.2x, stickhub 4.0x, complex_hierarchy 4.0x, multichannel 4.0x, pic_programmer 4.0x, sonde xilinx 4.0x. ## The fix: rail-bank tru",
       "title": "Stacked passives draw as isolated islands: a 16-cap bank carries 26 power symbols where the human used 2",
       "url": "https://github.com/copperheadhq/copperhead/issues/233",
-      "verified": false
+      "verified": true,
+      "notes": "Verified from the official issue and comments: the requested rail-bank work was already implemented in PR #224 / commit ce72222 before this lead was queued. The issue records no fixed bounty, assignment rule, payout method, or payment trigger; a later /attempt comment does not create funding."
     },
     {
       "accepted_payout": null,
