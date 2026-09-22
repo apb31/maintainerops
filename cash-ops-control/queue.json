@@ -1,25 +1,14 @@
 {
   "counts": {
+    "queued": 3,
     "accepted_work": 0,
-    "leased": 0,
-    "parked": 33,
-    "queued": 4,
-    "submitted_checks": 1,
-    "verifications": 3
+    "submitted_checks": 0,
+    "verifications": 3,
+    "leased": 1,
+    "parked": 33
   },
-  "generated_at": "2026-09-22T17:21:08+00:00",
+  "generated_at": "2026-09-22T17:50:10+00:00",
   "jobs": [
-    {
-      "id": "submitted-check-33e39857abc92ce6b9a1",
-      "item_id": "33e39857abc92ce6b9a1",
-      "kind": "submitted-check",
-      "priority": 200,
-      "role": "Collector",
-      "safe_next_action": "Check the official source for feedback or payout status; record the result.",
-      "source_fingerprint": "d7378c69df17a8ffcf88afd7",
-      "source_url": "https://jobs.wordpress.net/job/ui-ux-designer-wordpress-developer-for-3d-modeling-service-website",
-      "status": "submitted"
-    },
     {
       "id": "verify-0f6bfd099d3dc585046b",
       "item_id": "0f6bfd099d3dc585046b",

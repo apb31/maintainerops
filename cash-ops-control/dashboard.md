@@ -1,13 +1,13 @@
 # Cash Ops Control
 
-Updated: 2026-09-22T17:21:08+00:00  
+Updated: 2026-09-22T17:50:10+00:00  
 Scan health: **ok**
 
 ## Execution queue
 
-Queued: **4/5** · Leased: **0** · Parked: **33**  
-Accepted/application: **0** · Submitted checks: **1** · Verifications: **3**  
-Next queued work: Collector: Check the official source for feedback or payout status; record the result. [https://jobs.wordpress.net/job/ui-ux-designer-wordpress-developer-for-3d-modeling-service-website]
+Queued: **3/5** · Leased: **1** · Parked: **33**  
+Accepted/application: **0** · Submitted checks: **0** · Verifications: **3**  
+Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/looking-for-n8n-make-automation-specialist-for-ongoing-fixed-price-projects/315672]
 
 ## Financial ledger
 
@@ -22,7 +22,7 @@ Next queued work: Collector: Check the official source for feedback or payout st
 | Net | $0.00 | Recorded collection less recorded spend |
 
 Applications/claims in progress: **1**  
-Best next action: Collector: Check the official source for feedback or payout status; record the result. [https://jobs.wordpress.net/job/ui-ux-designer-wordpress-developer-for-3d-modeling-service-website]  
+Best next action: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/looking-for-n8n-make-automation-specialist-for-ongoing-fixed-price-projects/315672]  
 External worker status: latest scan run **ok** at 2026-09-22T17:21:08+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 

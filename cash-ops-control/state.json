@@ -1195,7 +1195,17 @@
         "cooldown_until": "2026-09-22T14:08:38+00:00",
         "last_note": "Await buyer response; enforce private sent-mail deduplication before any follow-up.",
         "last_outcome": "checkpoint",
-        "next_due_at": "2026-09-22T14:08:38+00:00"
+        "next_due_at": "2026-09-22T14:08:38+00:00",
+        "lease": {
+          "owner": "hourly-executor",
+          "claimed_at": "2026-09-22T17:50:10+00:00",
+          "expires_at": "2026-09-22T18:50:10+00:00"
+        },
+        "current_job": {
+          "id": "submitted-check-33e39857abc92ce6b9a1",
+          "kind": "submitted-check",
+          "source_fingerprint": "d7378c69df17a8ffcf88afd7"
+        }
       },
       "first_seen": "2026-09-22T03:05:39+00:00",
       "id": "33e39857abc92ce6b9a1",
