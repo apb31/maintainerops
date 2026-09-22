@@ -1,12 +1,12 @@
 # Cash Ops Control
 
-Updated: 2026-09-22T20:15:08+00:00  
+Updated: 2026-09-22T22:59:26+00:00  
 Scan health: **ok**
 
 ## Execution queue
 
-Queued: **3/5** · Leased: **0** · Parked: **34**  
-Accepted/application: **0** · Submitted checks: **0** · Verifications: **3**  
+Queued: **4/5** · Leased: **0** · Parked: **34**  
+Accepted/application: **0** · Submitted checks: **0** · Verifications: **4**  
 Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/seeking-full-time-job-in-ai-automation-n8n-workflow-builder-client-interaction-business-process/315516]
 
 ## Financial ledger
@@ -23,14 +23,14 @@ Next queued work: Verifier: Verify source ownership, open status, eligibility, f
 
 Applications/claims in progress: **1**  
 Best next action: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/seeking-full-time-job-in-ai-automation-n8n-workflow-builder-client-interaction-business-process/315516]  
-External worker status: latest scan run **ok** at 2026-09-22T20:15:08+00:00; execution host heartbeat is not available.  
+External worker status: latest scan run **ok** at 2026-09-22T22:59:26+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Pipeline
 
 | Status | Count |
 |---|---:|
-| lead | 3 |
+| lead | 4 |
 | qualified | 0 |
 | claimed | 0 |
 | working | 0 |
@@ -42,11 +42,11 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Source observations
 
-- Algora public bounties: ok (8) at 2026-09-22T20:15:06+00:00
-- Opire public bounties: ok (0) at 2026-09-22T20:15:06+00:00
-- n8n Community Jobs buyers: ok (3) at 2026-09-22T20:15:07+00:00
-- Make Community Hire Help buyers: ok (3) at 2026-09-22T20:15:07+00:00
-- WordPress Jobs recent listings: not modified (n/a) at 2026-09-22T20:15:08+00:00
+- Algora public bounties: ok (8) at 2026-09-22T22:59:24+00:00
+- Opire public bounties: ok (0) at 2026-09-22T22:59:24+00:00
+- n8n Community Jobs buyers: ok (3) at 2026-09-22T22:59:25+00:00
+- Make Community Hire Help buyers: ok (4) at 2026-09-22T22:59:25+00:00
+- WordPress Jobs recent listings: not modified (n/a) at 2026-09-22T22:59:26+00:00
 
 ## Errors
 

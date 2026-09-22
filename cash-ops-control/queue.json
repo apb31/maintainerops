@@ -3,11 +3,11 @@
     "accepted_work": 0,
     "leased": 0,
     "parked": 34,
-    "queued": 3,
+    "queued": 4,
     "submitted_checks": 0,
-    "verifications": 3
+    "verifications": 4
   },
-  "generated_at": "2026-09-22T20:15:08+00:00",
+  "generated_at": "2026-09-22T22:59:26+00:00",
   "jobs": [
     {
       "id": "verify-2582181d17912e8129f1",
@@ -32,13 +32,24 @@
       "status": "lead"
     },
     {
+      "id": "verify-8ad1248e73819ca7fc0a",
+      "item_id": "8ad1248e73819ca7fc0a",
+      "kind": "verify",
+      "priority": 100,
+      "role": "Verifier",
+      "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
+      "source_fingerprint": "219fa82ea092344ee5006b74",
+      "source_url": "https://community.make.com/t/make-com-developer-needed-karbon-ringcentral-google-workspace-integration-for-cpa-firm/115741",
+      "status": "lead"
+    },
+    {
       "id": "verify-8ca9a1560de5dd932f33",
       "item_id": "8ca9a1560de5dd932f33",
       "kind": "verify",
       "priority": 100,
       "role": "Verifier",
       "safe_next_action": "Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules.",
-      "source_fingerprint": "43a073e13188017271f74cf1",
+      "source_fingerprint": "5fddb5177db5d15dcdf0f087",
       "source_url": "https://community.make.com/t/need-help-using-make-to-float-information-from-katana-into-qbo/115721",
       "status": "lead"
     }
