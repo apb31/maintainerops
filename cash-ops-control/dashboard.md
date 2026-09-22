@@ -1,6 +1,6 @@
 # Cash Ops Control
 
-Updated: 2026-09-21T23:40:37+00:00  
+Updated: 2026-09-22T01:55:06+00:00  
 Scan health: **ok**
 
 ## Execution queue
@@ -23,7 +23,7 @@ Next queued work: Verifier: Verify source ownership, open status, eligibility, f
 
 Applications/claims in progress: **0**  
 Best next action: Unblock: [[Bounty proposal] docs(cli): Spanish agent quickstart and CSV export guide ($60 proposed)](https://github.com/BasedHardware/omi/issues/14576)  
-External worker status: latest scan run **ok** at 2026-09-21T23:40:37+00:00; execution host heartbeat is not available.  
+External worker status: latest scan run **ok** at 2026-09-22T01:55:06+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Pipeline
@@ -42,18 +42,18 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Source observations
 
-- Algora public bounties: ok (25) at 2026-09-21T23:40:34+00:00
-- Opire public bounties: ok (0) at 2026-09-21T23:40:35+00:00
-- track:1808a0c602aa5d9dcdc2: ok (1) at 2026-09-21T23:40:35+00:00
-- track:23648899e8c4ff068c69: ok (1) at 2026-09-21T23:40:35+00:00
-- track:2447ca748dfe7da6d196: ok (1) at 2026-09-21T23:40:35+00:00
-- track:33ed148138b70f539324: ok (1) at 2026-09-21T23:40:36+00:00
-- track:3edc98b7d14fcff33d3c: ok (1) at 2026-09-21T23:40:36+00:00
-- track:45147c39842053097e88: ok (1) at 2026-09-21T23:40:36+00:00
-- track:572bfb297d9e92b0beac: ok (1) at 2026-09-21T23:40:36+00:00
-- track:7f0d310a9f3cdfa3ef36: ok (1) at 2026-09-21T23:40:37+00:00
-- track:884ce48f235ae8d639ee: ok (1) at 2026-09-21T23:40:37+00:00
-- track:915b7776f04c755b3b02: ok (1) at 2026-09-21T23:40:37+00:00
+- Algora public bounties: ok (25) at 2026-09-22T01:55:03+00:00
+- Opire public bounties: ok (0) at 2026-09-22T01:55:03+00:00
+- track:1808a0c602aa5d9dcdc2: ok (1) at 2026-09-22T01:55:03+00:00
+- track:23648899e8c4ff068c69: ok (1) at 2026-09-22T01:55:04+00:00
+- track:2447ca748dfe7da6d196: ok (1) at 2026-09-22T01:55:04+00:00
+- track:33ed148138b70f539324: ok (1) at 2026-09-22T01:55:04+00:00
+- track:3edc98b7d14fcff33d3c: ok (1) at 2026-09-22T01:55:05+00:00
+- track:45147c39842053097e88: ok (1) at 2026-09-22T01:55:05+00:00
+- track:572bfb297d9e92b0beac: ok (1) at 2026-09-22T01:55:05+00:00
+- track:7f0d310a9f3cdfa3ef36: ok (1) at 2026-09-22T01:55:05+00:00
+- track:884ce48f235ae8d639ee: ok (1) at 2026-09-22T01:55:06+00:00
+- track:915b7776f04c755b3b02: ok (1) at 2026-09-22T01:55:06+00:00
 
 ## Errors
 
