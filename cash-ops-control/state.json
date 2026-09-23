@@ -198,15 +198,19 @@
       "advertised_payout": null,
       "collected": 0,
       "execution": {
-        "current_job": {
+        "checkpoint": {
+          "at": "2026-09-23T04:45:30+00:00",
+          "summary": "Primary-source review confirms a seller solicitation, not paid buyer work; parked with no outreach or spend."
+        },
+        "last_outcome": "rejected",
+        "last_outcome_at": "2026-09-23T04:45:30+00:00",
+        "last_note": "Seller seeking employment/services; no buyer, scope, payout, assignment, or submission path. No outreach or spend.",
+        "parked": true,
+        "parked_reason": "rejected",
+        "last_job": {
           "id": "verify-2582181d17912e8129f1",
           "kind": "verify",
           "source_fingerprint": "a52c9a0676f3254e8000d71d"
-        },
-        "lease": {
-          "claimed_at": "2026-09-23T04:42:26+00:00",
-          "expires_at": "2026-09-23T05:42:26+00:00",
-          "owner": "hourly-executor"
         }
       },
       "first_seen": "2026-09-22T17:21:07+00:00",
@@ -219,11 +223,12 @@
       "source": "n8n Community Jobs buyers",
       "source_comments": null,
       "source_updated_at": null,
-      "status": "lead",
+      "status": "rejected",
       "summary": "<p>Hi — I recently came across n8n’s community and really liked the interactions on it.</p> <p>I’m Jim Menezes, and I build AI + automation solutions — most recently an n8n workflow for a clinic’s WhatsApp inbound line (signature verification, duplicate detection, AI-agent-driven",
       "title": "Seeking full-time Job - In AI Automation & n8n Workflow builder, client interaction, business process",
       "url": "https://community.n8n.io/t/seeking-full-time-job-in-ai-automation-n8n-workflow-builder-client-interaction-business-process/315516",
-      "verified": false
+      "verified": true,
+      "notes": "Original n8n Community post reviewed on 2026-09-23. This is a seller advertising personal services and seeking work, not a buyer request or paid assignment. No outreach or spend."
     },
     {
       "accepted_payout": null,
