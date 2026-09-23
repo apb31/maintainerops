@@ -1,13 +1,7 @@
 name: Cash Ops scan
 
 on:
-  schedule:
-    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
-  push:
-    paths:
-      - "cash-ops-control/**"
-      - ".github/workflows/cash-ops.yml"
 
 permissions:
   contents: write
