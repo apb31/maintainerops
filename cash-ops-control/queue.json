@@ -1,7 +1,13 @@
 {
-  "version": 1,
-  "generated_at": "2026-09-23T04:45:30+00:00",
-  "max_jobs": 5,
+  "counts": {
+    "accepted_work": 0,
+    "leased": 0,
+    "parked": 35,
+    "queued": 3,
+    "submitted_checks": 0,
+    "verifications": 3
+  },
+  "generated_at": "2026-09-23T04:48:59+00:00",
   "jobs": [
     {
       "id": "verify-6d81b4b8c63ee62fecd9",
@@ -37,12 +43,6 @@
       "status": "lead"
     }
   ],
-  "counts": {
-    "queued": 3,
-    "accepted_work": 0,
-    "submitted_checks": 0,
-    "verifications": 3,
-    "leased": 0,
-    "parked": 35
-  }
+  "max_jobs": 5,
+  "version": 1
 }
