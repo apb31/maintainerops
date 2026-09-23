@@ -1,6 +1,6 @@
 # Cash Ops Control
 
-Updated: 2026-09-23T01:23:45+00:00  
+Updated: 2026-09-23T04:47:11+00:00  
 Scan health: **ok**
 
 ## Execution queue
@@ -23,7 +23,7 @@ Next queued work: Verifier: Verify source ownership, open status, eligibility, f
 
 Applications/claims in progress: **1**  
 Best next action: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/buscamos-ai-automation-engineer-para-construir-nuestro-sistema-de-soporte-con-ia/315655]  
-External worker status: latest scan run **ok** at 2026-09-23T01:23:45+00:00; execution host heartbeat is not available.  
+External worker status: latest scan run **ok** at 2026-09-23T04:47:11+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Pipeline
@@ -42,11 +42,11 @@ Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
 ## Source observations
 
-- Algora public bounties: ok (8) at 2026-09-23T01:23:42+00:00
-- Opire public bounties: ok (0) at 2026-09-23T01:23:43+00:00
-- n8n Community Jobs buyers: ok (3) at 2026-09-23T01:23:44+00:00
-- Make Community Hire Help buyers: ok (4) at 2026-09-23T01:23:45+00:00
-- WordPress Jobs recent listings: not modified (n/a) at 2026-09-23T01:23:45+00:00
+- Algora public bounties: ok (8) at 2026-09-23T04:47:09+00:00
+- Opire public bounties: ok (0) at 2026-09-23T04:47:09+00:00
+- n8n Community Jobs buyers: ok (3) at 2026-09-23T04:47:10+00:00
+- Make Community Hire Help buyers: ok (4) at 2026-09-23T04:47:10+00:00
+- WordPress Jobs recent listings: not modified (n/a) at 2026-09-23T04:47:11+00:00
 
 ## Errors
 
