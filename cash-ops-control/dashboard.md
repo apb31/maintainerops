@@ -5,9 +5,9 @@ Scan health: **ok**
 
 ## Execution queue
 
-Queued: **4/5** · Leased: **0** · Parked: **34**  
-Accepted/application: **0** · Submitted checks: **0** · Verifications: **4**  
-Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/seeking-full-time-job-in-ai-automation-n8n-workflow-builder-client-interaction-business-process/315516]
+Queued: **3/5** · Leased: **1** · Parked: **34**  
+Accepted/application: **0** · Submitted checks: **0** · Verifications: **3**  
+Next queued work: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/buscamos-ai-automation-engineer-para-construir-nuestro-sistema-de-soporte-con-ia/315655]
 
 ## Financial ledger
 
@@ -22,7 +22,7 @@ Next queued work: Verifier: Verify source ownership, open status, eligibility, f
 | Net | $0.00 | Recorded collection less recorded spend |
 
 Applications/claims in progress: **1**  
-Best next action: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/seeking-full-time-job-in-ai-automation-n8n-workflow-builder-client-interaction-business-process/315516]  
+Best next action: Verifier: Verify source ownership, open status, eligibility, fixed payout, scope, and submission rules. [https://community.n8n.io/t/buscamos-ai-automation-engineer-para-construir-nuestro-sistema-de-soporte-con-ia/315655]  
 External worker status: latest scan run **ok** at 2026-09-23T01:23:45+00:00; execution host heartbeat is not available.  
 Work quota: **unknown**. This program cannot inspect ChatGPT Work usage or cost.
 
